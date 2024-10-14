@@ -1,150 +1,138 @@
-// NAG DECLARE NANG ARRAY PARA SA CART //
+// DECLARE ARRAY PARA SA CART //
 const cartItems = [];
 
-// UPDATE NUNG CART DROP DOWN //
+// UPDATE NUNG CART DROPDOWN //
 function updateCartDropdown() 
 {
-    const cartDropdown = document.getElementById('cart-items');
-    const cartCount = document.getElementById('cart-item-count');
-    cartDropdown.innerHTML = '';
+    const cartDropdown = $('#cart-items');
+    const cartCount = $('#cart-item-count');
+    cartDropdown.empty();
 
     if (cartItems.length === 0) 
-        {
-        cartDropdown.innerHTML = '<li><a class="dropdown-item" href="#">Your cart is empty</a></li>';
-        cartCount.innerText = '(0)';
+    {
+        cartDropdown.append('<li><a class="dropdown-item" href="#">Your cart is empty</a></li>');
+        cartCount.text('(0)');
         return;
     }
 
     cartItems.forEach((item, index) => 
-        {
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `
-            <div class="d-flex justify-content-between align-items-center">
-                <a class="dropdown-item" href="#">${item.name} - ₱${item.price} x ${item.quantity}</a>
-                <button class="btn btn-danger btn-sm" data-index="${index}" data-id="${item.id}">X</button>
-            </div>
+    {
+        const listItem = `
+            <li>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a class="dropdown-item" href="#">${item.name} - ₱${item.price} x ${item.quantity}</a>
+                    <button class="btn btn-danger btn-sm" data-index="${index}" data-id="${item.id}">X</button>
+                </div>
+            </li>
         `;
-        cartDropdown.appendChild(listItem);
+        cartDropdown.append(listItem);
     });
 
-    const clearAllItem = document.createElement('li');
-    clearAllItem.innerHTML = '<li><hr class="dropdown-divider"></li><li><button class="dropdown-item" id="clear-cart">Clear All</button></li>';
-    cartDropdown.appendChild(clearAllItem);
+    const clearAllItem = `
+        <li><hr class="dropdown-divider"></li>
+        <li><button class="dropdown-item" id="clear-cart">Clear All</button></li>
+    `;
+    cartDropdown.append(clearAllItem);
 
     const totalQuantity = cartItems.reduce((total, item) => total + parseInt(item.quantity), 0);
-    cartCount.innerText = `(${totalQuantity})`;
+    cartCount.text(`(${totalQuantity})`);
 }
 
-// I LOAD YUNG CART ITEMS GALING SA DATABASE //
+// LOAD CART ITEMS GALING SA DATABASE //
 function loadCartItemsFromDatabase() 
 {
-    fetch('cart.php', 
+    $.ajax({
+        url: 'cart.php',
+        method: 'GET',
+        success: function (data) 
         {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({})
-    })
-
-    .then(response => response.json())
-    .then(data => 
-        {
-        if (data.status === 'success') 
-            {
             cartItems.length = 0;
             data.items.forEach(item => cartItems.push(item));
             updateCartDropdown();
         }
-    })
-    .catch(console.error);
+    });
 }
 
-// DELETE ITEM SA CART //
+// DELETE ITEM GALING SA CART //
 function deleteCartItem(index) 
 {
     const item = cartItems[index];
-    fetch('cart.php', 
-        {
+    $.ajax({
+        url: 'cart.php',
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ delete: true, id: item.id })
-    })
-
-    .then(response => response.json())
-    .then(data => 
+        contentType: 'application/json',
+        data: JSON.stringify({ delete: true, id: item.id }),
+        success: function (data) 
         {
-        if (data.status === 'success') 
+            if (data.status === 'success') 
             {
-            cartItems.splice(index, 1);
-            updateCartDropdown();
+                cartItems.splice(index, 1);
+                updateCartDropdown();
+            }
         }
-    })
-    .catch(console.error);
+    });
 }
 
-// EVENT LISTENER NANG DELETE BUTTON //
-document.addEventListener('click', function(event) 
+// EVENT LISTENER PARA SA DELETE BUTTON //
+$(document).on('click', '.btn-danger', function (event) 
 {
-    if (event.target.matches('.btn-danger')) 
-        {
-        const index = event.target.getAttribute('data-index');
-        deleteCartItem(index);
-        event.stopPropagation();
-    }
+    const index = $(this).data('index');
+    deleteCartItem(index);
+    event.stopPropagation();
 });
 
-// EVENT LISTENER NANG CLEAR ALL BUTTON //
-document.addEventListener('click', function(event) 
+// EVENT LISTENER PARA SA CLEAR ALL BUTTON //
+$(document).on('click', '#clear-cart', function (event) 
 {
-    if (event.target.matches('#clear-cart')) 
+    $.ajax({
+        url: 'cart.php',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ clear_all: true }),
+        success: function (data) 
         {
-        fetch('cart.php', 
-            {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ clear_all: true })
-        })
-
-        .then(response => response.json())
-        .then(data => 
-            {
             if (data.status === 'success') 
-                {
+            {
                 cartItems.length = 0;
                 updateCartDropdown();
             }
-        })
-        .catch(console.error);
-        event.stopPropagation();
-    }
+        }
+    });
+    event.stopPropagation();
 });
 
-// ADD TO CART FUNCTION //
-document.querySelectorAll('.add-to-cart-btn').forEach(button => 
-    {
-    button.addEventListener('click', function() {
-        const productElement = this.closest('.bginfo');
-        const productName = productElement.querySelector('.collection-name h5').innerText;
-        const productPrice = productElement.querySelector('p:nth-of-type(2)').innerText.split('₱')[1].replace(/,/g, '');
-        const productSize = productElement.querySelector('select').value;
-        const productQuantity = productElement.querySelector('input[type="number"]').value;
+// FUNCTION NG ADD TO CART //
+$('.add-to-cart-btn').click(function () 
+{
+    const productElement = $(this).closest('.bginfo');
+    const productName = productElement.find('.collection-name h5').text();
+    const productPrice = productElement.find('p:contains("Price")').text().split('₱')[1].replace(/,/g, '');
+    const productSize = productElement.find('select').val();
+    const productQuantity = productElement.find('input[type="number"]').val();
 
-        fetch('cart.php', 
-            {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: productName, price: productPrice, size: productSize, quantity: parseInt(productQuantity) })
-        })
-
-        .then(response => response.json())
-        .then(data => {
+    $.ajax({
+        url: 'cart.php',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ name: productName, price: productPrice, size: productSize, quantity: parseInt(productQuantity) }),
+        success: function (data) 
+        {
             if (data.status === 'success') 
+            {
+                const newItem = 
                 {
+                    name: productName,
+                    price: productPrice,
+                    size: productSize,
+                    quantity: parseInt(productQuantity),
+                    id: data.id
+                };
+                cartItems.push(newItem);
                 loadCartItemsFromDatabase();
+                updateCartDropdown();
             }
-        })
-        .catch(console.error);
+        }
     });
 });
-
-// ILOAD YUNG CART ITEMS PAG NAG REFRESH NANG PAGE //
+// LOAD CART ITEMS ON PAGE REFRESH //
 loadCartItemsFromDatabase();
