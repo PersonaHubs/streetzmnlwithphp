@@ -1,26 +1,25 @@
 <?php
-// cart.php
-// Database connection
+// KUNIN YUNG DATABASE //
 $host = 'localhost';
 $dbname = 'shop';
 $username = 'root';
 $password = '';
 
-// Create connection
+// CONNECT YUNG DATABASE //
 $conn = new mysqli($host, $username, $password, $dbname);
 
-// Check connection
+// CHECKING NANG CONNECTION KUNG NAKA CONNECT BA TALAGA //
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Get the JSON input
+// KUNIN YUNG JSON INPUTS PARA SA MGA AJAX REQUESTS // 
 $data = json_decode(file_get_contents("php://input"), true);
 
-// Initialize response array
+// RESPONSE ARRAY PARA DIN AJAX, MORE ON ERROR HANDLING AT MESSAGES //
 $response = ['status' => 'error', 'message' => ''];
 
-// Fetch items if no input data
+// FETCHING ITEMS //
 if (empty($data)) {
     $sql = "SELECT id, shoeName, shoePrice, shoeSize, shoeQuantity FROM cart";
     $result = $conn->query($sql);
@@ -29,7 +28,7 @@ if (empty($data)) {
         $items = [];
         while ($row = $result->fetch_assoc()) {
             $items[] = [
-                'id' => $row['id'], // Fetch the ID
+                'id' => $row['id'],
                 'name' => $row['shoeName'],
                 'price' => $row['shoePrice'],
                 'size' => $row['shoeSize'],
@@ -40,16 +39,16 @@ if (empty($data)) {
     } else {
         echo json_encode(['status' => 'success', 'items' => []]);
     }
-    exit; // Stop further execution
+    exit;
 }
 
-// Check if data is valid for add or delete
+// CHECKING NG DATA KUNG VALID //
 if (isset($data['name']) && isset($data['size']) && isset($data['quantity'])) {
     $name = $conn->real_escape_string($data['name']);
     $size = $conn->real_escape_string($data['size']);
     $quantity = $conn->real_escape_string($data['quantity']);
 
-    // Insert item into cart
+    // ADDING NANG ITEM PAPUNTA SA CART //
     $sql = "INSERT INTO cart (shoeName, shoePrice, shoeSize, shoeQuantity) VALUES ('$name', '{$data['price']}', '$size', '$quantity')";
 
     if ($conn->query($sql) === TRUE) {
@@ -58,7 +57,7 @@ if (isset($data['name']) && isset($data['size']) && isset($data['quantity'])) {
         $response = ['status' => 'error', 'message' => 'Error: ' . $conn->error];
     }
 } elseif (isset($data['delete']) && isset($data['id'])) {
-    // Handle delete item logic with ID
+    // PARA SA DELETE SA CART //
     $id = $conn->real_escape_string($data['id']);
     
     $sql = "DELETE FROM cart WHERE id = '$id'";
@@ -69,7 +68,7 @@ if (isset($data['name']) && isset($data['size']) && isset($data['quantity'])) {
         $response = ['status' => 'error', 'message' => 'Error: ' . $conn->error];
     }
 } elseif (isset($data['clear_all'])) {
-    // Handle clear all logic
+    // PARA SA CLEAR ALL CART //
     $sql = "DELETE FROM cart";
 
     if ($conn->query($sql) === TRUE) {
@@ -79,9 +78,7 @@ if (isset($data['name']) && isset($data['size']) && isset($data['quantity'])) {
     }
 }
 
-// Send the response
+// SEND NUNG RESPONSE //
 echo json_encode($response);
-
-// Close connection
 $conn->close();
 ?>

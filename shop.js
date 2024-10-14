@@ -1,21 +1,23 @@
-const cartItems = []; // Array to hold cart items
+const cartItems = []; // DECLARE NANG ARRAY PARA MAG HOLD NANG ITEM YUNG CART //
 
-// Function to update the cart dropdown
-function updateCartDropdown() {
+// FUNCTION PARA SA DROPDOWN NUNG CART //
+function updateCartDropdown() 
+{
     const cartDropdown = document.getElementById('cart-items');
     const cartCount = document.getElementById('cart-item-count');
 
-    // Clear the dropdown items
+    // CLEAR ALL BUTTON //
     cartDropdown.innerHTML = '';
 
-    // If there are no items, show the empty message
-    if (cartItems.length === 0) {
+    // DISPLAY NANG EMPTY CART PAG WALANG LAMAN //
+    if (cartItems.length === 0) 
+    {
         cartDropdown.innerHTML = '<li><a class="dropdown-item" href="#">Your cart is empty</a></li>';
         cartCount.innerText = '(0)';
         return;
     }
 
-    // Otherwise, list the items in the cart
+    // INNER HTML KUNIN YUNG NAME, PRICE, QUANTITY NUNG ITEM PARA MA DISPLAY SA CART, ITEM ID PARA DUN SA DATABASE SA LOOB NG PHPMYADMIN //
     cartItems.forEach((item, index) => {
         const listItem = document.createElement('li');
         listItem.innerHTML = `
@@ -27,30 +29,33 @@ function updateCartDropdown() {
         cartDropdown.appendChild(listItem);
     });
 
-    // Add Clear All button
+    // CLEAR ALL BUTTON //
     const clearAllItem = document.createElement('li');
     clearAllItem.innerHTML = '<li><hr class="dropdown-divider"></li>';
     clearAllItem.innerHTML += '<li><button class="dropdown-item" id="clear-cart">Clear All</button></li>';
     cartDropdown.appendChild(clearAllItem);
 
-    // Correctly sum up the total quantity of items and update the cart count
+    // PARA MAG COUNT KUNG ILAN YUNG NASA CART //
     const totalQuantity = cartItems.reduce((total, item) => total + parseInt(item.quantity, 10), 0);
     cartCount.innerText = `(${totalQuantity})`;
 }
 
 
-// Function to load cart items from the database
-function loadCartItemsFromDatabase() {
+// I LOAD YUNG MGA LAMAN NUNG DATABASE GALING SA PHPMYADMIN, PARA PAG MAY LAMAN YUNG DATABASE MAY LAMAN DIN YUNG CART //
+function loadCartItemsFromDatabase() 
+{
     fetch('cart.php', {
         method: 'POST',
-        headers: {
+        headers: 
+        {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({})
     })
     .then(response => response.json())
     .then(data => {
-        if (data.status === 'success') {
+        if (data.status === 'success') 
+            {
             // Clear current cartItems array
             cartItems.length = 0;
             
@@ -59,68 +64,90 @@ function loadCartItemsFromDatabase() {
                 cartItems.push(item);
             });
             updateCartDropdown(); // Update the dropdown with fetched items
-        } else {
+        } 
+        
+        else 
+        {
             console.error(data.message);
         }
     })
     .catch(error => console.error('Error:', error));
 }
 
-// Function to delete an item from the cart
+// FUNCTION PARA SA PAG DELETE NG ITEMS SA CART //
 function deleteCartItem(index) {
     const item = cartItems[index];
 
-    // Send an AJAX request to delete the item from the database using the ID
-    fetch('cart.php', {
+    // AJAX POST PARA I REQUEST NA I DELETE DIN YUNG NASA LAMAN NUNG DATABASE //
+    fetch('cart.php', 
+        {
         method: 'POST',
-        headers: {
+        headers: 
+        {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
+        body: JSON.stringify(
+            {
             delete: true,
-            id: item.id // Use the unique ID for deletion
+            id: item.id
         })
     })
     .then(response => response.json())
     .then(data => {
-        if (data.status === 'success') {
-            cartItems.splice(index, 1); // Remove item from cart
-            updateCartDropdown(); // Update the cart dropdown
-        } else {
+        if (data.status === 'success') 
+            {
+            cartItems.splice(index, 1);
+            updateCartDropdown();
+        } 
+        
+        else 
+        {
             alert(data.message);
         }
     })
     .catch(error => console.error('Error:', error));
 }
 
-// Event listener for delete buttons
-document.addEventListener('click', function(event) {
-    if (event.target.matches('.btn-danger')) {
+// EVENT LISTENER NG DELETE BUTTON //
+document.addEventListener('click', function(event) 
+{
+    if (event.target.matches('.btn-danger')) 
+        {
         const index = event.target.getAttribute('data-index');
         deleteCartItem(index);
         event.stopPropagation();
     }
 });
 
-// Event listener for clear cart button
-document.addEventListener('click', function(event) {
-    if (event.target.matches('#clear-cart')) {
+// EVENT LISTENER NG CLEAR BUTTON //
+document.addEventListener('click', function(event) 
+{
+    if (event.target.matches('#clear-cart')) 
+        {
         // Send an AJAX request to clear all items from the database
-        fetch('cart.php', {
+        fetch('cart.php', 
+            {
             method: 'POST',
-            headers: {
+            headers: 
+            {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
+            body: JSON.stringify(
+                {
                 clear_all: true
             })
         })
         .then(response => response.json())
-        .then(data => {
-            if (data.status === 'success') {
+        .then(data => 
+            {
+            if (data.status === 'success') 
+            {
                 cartItems.length = 0; // Clear the local cart array
                 updateCartDropdown(); // Update the dropdown
-            } else {
+            } 
+            
+            else 
+            {
                 alert(data.message);
             }
         })
@@ -159,20 +186,20 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
         })
         .then(response => response.json())
         .then(data => {
-            // Handle success or error response
-            if (data.status === 'success') {
-                // Reload cart items from the database
+            if (data.status === 'success') 
+                {
                 loadCartItemsFromDatabase();
-            } else {
+            } 
+            
+            else 
+            {
                 alert(data.message);
             }
         })
         .catch(error => console.error('Error:', error));
 
-        // Prevent the dropdown from closing
-        event.stopPropagation();
     });
 });
 
-// Load cart items from the database on page load
+// KUNIN YUNG LAMAN NUNG DATABASE AT I DISPLAY SA CART PAG NAG LOAD YUNG PAGE //
 loadCartItemsFromDatabase();
