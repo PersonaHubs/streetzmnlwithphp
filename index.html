@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreetzMNL</title>
+
+  <!-- CSS LINKS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- END NG CSS LINKS -->
+
+</head>
+<body class="loaded">
+
+<!-- NAVBAR PART -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark navbar-custom fixed-top">
+  <div class="container">
+    <a href="index.html"><img src="./assets/images/smnlLogo.png" alt="Logo" height="60"></a>
+    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#featured-heading">Featured Brands</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#latest-heading">Latest</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">About Us</a>
+        </li>
+      </ul>
+      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</button>
+      <button type="button" class="btn btn-secondary ms-2" data-bs-toggle="modal" data-bs-target="#registerModal">Join Us</button>
+      <span class="navbar-cart-icon-container">
+        <a href="#.html"><img src="./assets/images/basket.png" class="navbar-cart-icon"></a>
+      </span>
+    </div>
+  </div>
+</nav>
+<!-- END NG NAVBAR PART -->
+
+<!-- CAROUSEL PART -->
+<div id="carouselIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <video class="d-block w-100 video-blur" alt="Slide 1" autoplay muted loop poster="./assets/images/MNL.png">
+        <source src="./assets/videos/stockVideo.mp4" type="video/mp4" class="carouselVid">
+      </video>
+      <div class="imageVideo">
+        <img src="./assets/images/MNL.png" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END NG CAROUSEL PART -->
+
+<br><br>
+
+<!-- TITLE QUOTE -->
+<div id="titledQuote">
+  <center>
+  <h2 id="texttitleQuote">THE ONLY WAY TO WIN IS TO OUTWORK EVERYBODY ELSE</h2>
+  </center>
+</div>
+<!-- END NG TITLE QUOTE -->
+
+<!-- WEBSITE CONTENT -->
+<div id="featured-heading" class="section"></div>
+<div class="container-fluid" data-aos="zoom-in">
+  <div class="my-5">
+    <div class="row">
+      <div class="col-md-12">     
+        <center>
+          <br>
+          <h1 id="textwebContent">Stepping into style is just the beginning where every pair tells a story.</h1>
+        </center>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <a href="shop.html"><button class="btn btn-dark">SHOP NOW</button></a>
+      </div>
+    </div>
+
+      <br><br><br><br>
+
+      <!-- FEATURE BRANDS -->
+      <div class="collections-container-fluid mt-3 px-5">
+        <h1 id="textfeatureBrands" class="mb-4">Featured Brands</h1>
+        <div class="row">
+          <div class="col-sm-6 col-md-3">
+            <div class="card text-center">
+              <img src="./assets/images/NikeLogo.png" class="card-img-top p-3" alt="Nike">
+              <div class="card-body">
+                <h5 class="card-title">Nike</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card text-center">
+              <img src="./assets/images/AdidasLogo.png" class="card-img-top p-3" alt="Adidas">
+              <div class="card-body">
+                <h5 class="card-title">Adidas</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card text-center">
+              <img src="./assets/images/ConverseLogo.png" class="card-img-top p-3" alt="Converse">
+              <div class="card-body">
+                <h5 class="card-title">Converse</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="card text-center">
+              <img src="./assets/images/WorldBalLogo.png" class="card-img-top p-3" alt="World Balance">
+              <div class="card-body">
+                <h5 class="card-title">World Balance</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END NG FEATURE BRANDS -->
+
+    </div>
+  </div>
+</div>
+
+<br><br><br><br><br><br><br>
+
+<!-- LATEST RELEASE -->
+<div id="latest-heading" class="section"></div>
+<div class="container-fluid mt-3 px-5" data-aos="zoom-in">
+  <div class="row">
+    <h1 id="textlatestRelease" class="mb-4">Latest Release</h1>
+    <div class="btn-group">
+      <button type="button" class="btn btn-dark" onclick="showImages('sports')">Sports</button>
+      <button type="button" class="btn btn-dark" onclick="showImages('casual')">Casual</button>
+      <button type="button" class="btn btn-dark" onclick="showImages('running')">Running</button>
+    </div>
+    
+    <div class="latest row mt-3">
+      <div id="sports-images" class="collection-category col-12">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/adidasSports1.png" alt="Adidas Adizero S12" class="shoe-image">
+            <img src="./assets/images/adidasSports1-1.png" alt="Sports Adizero S12 Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5>Adidas Adizero S12</h5>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/nikeSports1.png" alt="Nike Invincible 33" class="shoe-image">
+            <img src="./assets/images/nikeSports1-1.png" alt="Sports Invincible 33 Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5>Nike Invincible 33</h5>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/converseSports1.png" alt="Converse Weapon XA" class="shoe-image">
+            <img src="./assets/images/converseSports1-1.png" alt="Sports Converse Weapon XA Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5 id="textConverse">Converse Weapon XA</h5>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/worldbalanceSports1.png" alt="World Balance PutBack" class="shoe-image">
+            <img src="./assets/images/worldbalanceSports1-1.png" alt="Sports PutBack Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5>World Balance PutBack</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="casual-images" class="collection-category col-12 d-none">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/adidasCasual1.png" alt="Adidas Grand Court" class="shoe-image">
+            <img src="./assets/images/adidasCasual1-1.png" alt="Casual Grand Court Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5>Adidas Grand Court</h5>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/nikeCasual1.png" alt="Nike W Blazer Mid 77" class="shoe-image">
+            <img src="./assets/images/nikeCasual1-1.png" alt="Casual W Blazer Mid 77 Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5>Nike W Blazer Mid 77</h5>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/converseCasual1.png" alt="Converse Blaze Classic" class="shoe-image">
+            <img src="./assets/images/converseCasual1-1.png" alt="Casual Blaze Classic Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5 id="textConverse">Converse Blaze Classic</h5>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/worldbalanceCasual1.png" alt="World Balance Soren" class="shoe-image">
+            <img src="./assets/images/worldbalanceCasual1-1.png" alt="Casual Soren Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5>World Balance Soren</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="running-images" class="collection-category col-12 d-none">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/adidasRunning1.png" alt="Adidas Simba" class="shoe-image">
+            <img src="./assets/images/adidasRunning1-1.png" alt="Running Simba Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5>Adidas Simba</h5>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/nikeRunning1.png" alt="Nike Pegasus 41" class="shoe-image">
+            <img src="./assets/images/nikeRunning1-1.png" alt="Running Pegasus 41 Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5>Nike Pegasus 41</h5>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/converseRunning1.png" alt="Converse X Shai All Star" class="shoe-image">
+            <img src="./assets/images/converseRunning1-1.png" alt="Running X Shai All Star Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5 id="textConverse">Converse X Shai All Star</h5>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 latest-item">
+            <img src="./assets/images/worldbalanceRunning1.png" alt="World Balance Speeds" class="shoe-image">
+            <img src="./assets/images/worldbalanceRunning1-1.png" alt="Running Speeds Hover" class="shoe-image-hover">
+            <div class="collection-name">
+              <h5>World Balance Speeds</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END NG LATEST RELEASE -->
+<!-- END NG WEBSITE CONTENT -->
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!-- SIGN IN MODAL -->
+<div class="modal fade img-fluid" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+              <video autoplay muted loop class="video-fluid w-100 h-100" style="object-fit: cover; border-radius: 5px;">
+                <source src="./assets/videos/loginVideo.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="col-md-8">
+              <form id="signInForm" onsubmit="validateSignIn(event)">
+                <center><h1>Sign In</h1></center><br>
+                <div class="row">
+                  <div class="col-md-12">
+                    <label for="logmail" class="form-label"><span class="highlightedText2">*</span> Email</label>
+                    <input type="email" class="form-control" id="logmail" placeholder="Email" required>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-12">
+                    <label for="logpass" class="form-label"><span class="highlightedText2">*</span> Password</label>
+                    <input type="password" class="form-control" id="logpass" placeholder="Password" required minlength="8">
+                  </div>
+                </div>
+                <br>
+                <center>
+                  <button type="submit" class="btn btn-dark submit">Login</button>
+                  <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </center>
+                <br><br>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--END NG SIGN IN MODAL-->
+
+<!-- REGISTER MODAL -->
+<div class="modal fade img-fluid" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-body">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-md-4 d-flex align-items-center justify-content-center">
+                          <video autoplay muted loop class="video-fluid w-100 h-100" style="object-fit: cover; border-radius: 5px;">
+                              <source src="./assets/videos/registerVideo.mp4" type="video/mp4">
+                          </video>
+                      </div>
+                      <div class="col-md-8">
+                          <form id="registerForm" onsubmit="validateRegistration(event)">
+                              <center><h1>Registration</h1></center><br>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label for="email" class="form-label"><span class="highlightedText2">*</span> Email</label>
+                                      <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label for="confirmEmail" class="form-label"><span class="highlightedText2">*</span> Confirm Email</label>
+                                      <input type="email" class="form-control" id="confirmEmail" placeholder="Confirm Email" required>
+                                  </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label for="password" class="form-label"><span class="highlightedText2">*</span> Password</label>
+                                      <input type="password" class="form-control" id="password" placeholder="Password" required minlength="8">
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label for="confirmPassword" class="form-label"><span class="highlightedText2">*</span> Confirm Password</label>
+                                      <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required minlength="8">
+                                  </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label for="phone" class="form-label"><span class="highlightedText2">*</span> Phone Number</label>
+                                      <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required pattern="\d{11}" title="Please enter exactly 11 digits" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="11">
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label for="Zip" class="form-label">Zip Code</label>
+                                      <input type="text" class="form-control" id="Zip" placeholder="Zip Code" pattern="\d{4}" title="Please enter exactly 4 digits" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)" maxlength="4">
+                                  </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label for="province" class="form-label">Province</label>
+                                      <select class="form-select" id="province">
+                                        <option>Select Province</option>
+                                        <option>Select Province</option>
+                                        <option>Abra</option>
+                                        <option>Agusan del Norte</option>
+                                        <option>Agusan del Sur</option>
+                                        <option>Aklan</option>
+                                        <option>Albay</option>
+                                        <option>Antique</option>
+                                        <option>Apayao</option>
+                                        <option>Aurora</option>
+                                        <option>Basilan</option>
+                                        <option>Bataan</option>
+                                        <option>Batanes</option>
+                                        <option>Batangas</option>
+                                        <option>Benguet</option>
+                                        <option>Biliran</option>
+                                        <option>Bohol</option>
+                                        <option>Bukidnon</option>
+                                        <option>Bulacan</option>
+                                        <option>Cagayan</option>
+                                        <option>Camarines Norte</option>
+                                        <option>Camarines Sur</option>
+                                        <option>Camiguin</option>
+                                        <option>Capiz</option>
+                                        <option>Catanduanes</option>
+                                        <option>Cavite</option>
+                                        <option>Cebu</option>
+                                        <option>Cotabato</option>
+                                        <option>Davao de Oro</option>
+                                        <option>Davao del Norte</option>
+                                        <option>Davao del Sur</option>
+                                        <option>Davao Occidental</option>
+                                        <option>Davao Oriental</option>
+                                        <option>Dinagat Islands</option>
+                                        <option>Eastern Samar</option>
+                                        <option>Guimaras</option>
+                                        <option>Ifugao</option>
+                                        <option>Ilocos Norte</option>
+                                        <option>Ilocos Sur</option>
+                                        <option>Iloilo</option>
+                                        <option>Isabela</option>
+                                        <option>Kalinga</option>
+                                        <option>La Union</option>
+                                        <option>Laguna</option>
+                                        <option>Lanao del Norte</option>
+                                        <option>Lanao del Sur</option>
+                                        <option>Leyte</option>
+                                        <option>Maguindanao</option>
+                                        <option>Marinduque</option>
+                                        <option>Masbate</option>
+                                        <option>Metro Manila</option>
+                                        <option>Misamis Occidental</option>
+                                        <option>Misamis Oriental</option>
+                                        <option>Mountain Province</option>
+                                        <option>Negros Occidental</option>
+                                        <option>Negros Oriental</option>
+                                        <option>Northern Samar</option>
+                                        <option>Nueva Ecija</option>
+                                        <option>Nueva Vizcaya</option>
+                                        <option>Occidental Mindoro</option>
+                                        <option>Oriental Mindoro</option>
+                                        <option>Palawan</option>
+                                        <option>Pampanga</option>
+                                        <option>Pangasinan</option>
+                                        <option>Quezon</option>
+                                        <option>Quirino</option>
+                                        <option>Rizal</option>
+                                        <option>Romblon</option>
+                                        <option>Samar</option>
+                                        <option>Sarangani</option>
+                                        <option>Siquijor</option>
+                                        <option>Sorsogon</option>
+                                        <option>South Cotabato</option>
+                                        <option>Southern Leyte</option>
+                                        <option>Sultan Kudarat</option>
+                                        <option>Sulu</option>
+                                        <option>Surigao del Norte</option>
+                                        <option>Surigao del Sur</option>
+                                        <option>Tarlac</option>
+                                        <option>Tawi-Tawi</option>
+                                        <option>Zambales</option>
+                                        <option>Zamboanga del Norte</option>
+                                        <option>Zamboanga del Sur</option>
+                                        <option>Zamboanga Sibugay</option>
+                                      </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label for="city" class="form-label">City</label>
+                                      <select class="form-select" id="city">
+                                        <option>Select City</option>
+                                        <option>Caloocan</option>
+                                        <option>Las Piñas</option>
+                                        <option>Makati</option>
+                                        <option>Malabon</option>
+                                        <option>Mandaluyong</option>
+                                        <option>Manila</option>
+                                        <option>Marikina</option>
+                                        <option>Muntinlupa</option>
+                                        <option>Navotas</option>
+                                        <option>Parañaque</option>
+                                        <option>Pasay</option>
+                                        <option>Pasig</option>
+                                        <option>Quezon City</option>
+                                        <option>San Juan</option>
+                                        <option>Taguig</option>
+                                        <option>Valenzuela</option>
+                                        <option>Angeles</option>
+                                        <option>Baguio</option>
+                                        <option>Cebu City</option>
+                                        <option>Davao City</option>
+                                        <option>Iloilo City</option>
+                                        <option>Zamboanga City</option>
+                                        <option>Bacoor City</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <label for="address" class="form-label">Address</label>
+                                      <input type="text" class="form-control" id="address" placeholder="Address">
+                                  </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                  <div class="col-md-12 d-flex justify-content-center mt-3">
+                                      <button type="submit" class="btn btn-dark me-2">Submit</button>
+                                      <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                  </div>
+                              </div>
+                              <br><br>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- END NG REGISTER MODAL -->
+
+<!-- FEEDBACK MODAL -->
+<div class="modal fade img-fluid" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <form id="contactUsForm">
+              <center>
+                <h1><span class ="highlightedText">FEEDBACK</h1>  
+                <p>We would like to hear your thoughts about our website!</p>
+              </center>
+              <br>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="firstName" class="form-label"><span class ="highlightedText2">*</span> First Name</label>
+                  <input type="text" class="form-control" id="firstName2" placeholder="First Name">
+                  <br>
+                  <label for="email" class="form-label"><span class ="highlightedText2">*</span> Email</label>
+                  <input type="text" class="form-control" id="email2" placeholder="Email">
+                  <br>
+                </div>
+                <div class="col-md-6">
+                  <label for="lastName" class="form-label"><span class ="highlightedText2">*</span> Last Name</label>
+                  <input type="text" class="form-control" id="lastName2" placeholder="Last Name">
+                  <br>
+                  <label for="gender" class="form-label"><span class ="highlightedText2">*</span> Rate Us</label>
+                  <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5">
+                    <label for="star5"><i class="fas fa-star"></i></label>
+                    <input type="radio" name="rating" id="star4" value="4">
+                    <label for="star4"><i class="fas fa-star"></i></label>
+                    <input type="radio" name="rating" id="star3" value="3">
+                    <label for="star3"><i class="fas fa-star"></i></label>
+                    <input type="radio" name="rating" id="star2" value="2">
+                    <label for="star2"><i class="fas fa-star"></i></label>
+                    <input type="radio" name="rating" id="star1" value="1" checked>
+                    <label for="star1"><i class="fas fa-star"></i></label>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <p>Write your <span class ="highlightedText">Comments</span> or <span class ="highlightedText">Feedback</span> about our Website!</p>
+              <textarea class="form-control" id="comment2" rows="3" style="resize: none;"></textarea>
+              <br>
+              <center>
+                <button type="button" class="btn btn-success submit" onclick="sendContactEmail()">Submit</button>
+                <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </center>
+              <br>
+              <br>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END FEEDBACK MODAL -->
+
+<!-- HELP MODAL -->
+<div class="modal fade img-fluid" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <center>
+                <h1 class="mt-4">HELP</h1>
+              </center>  
+                <br>
+                <p>If you need assistance, we are here to help! Around the footer page you’ll find multiple ways to get support or find the answers you're looking for: Delivery, Returns, Terms of Sale, Terms of Use, and StreetzMNL Policy</p>
+
+                      <div class="contact-container">
+                        <div class="contact-item">
+                            <img src="./assets/images/comment.png" alt="Chat Icon">
+                            <h3>Chat with us</h3>
+                            <p>6:00 - 23:59</p>
+                            <p>7 days a week</p>
+                        </div>
+                
+                        <div class="contact-item">
+                            <img src="./assets/images/phone-call.png" alt="Call Icon">
+                            <h3>Call us</h3>
+                            <p>1800-16516453 (PLDT), 1800-86516453 (GLOBE)</p>
+                            <p>Products & Orders: 06:00 - 23:59, 7 days a week</p>
+                            <p>Company Info & Enquiries: 10:00 - 19:00, Monday - Friday</p>
+                        </div>
+                
+                        <div class="contact-item">
+                            <img src="./assets/images/location.png" alt="Store Icon">
+                            <h3>Find a Store</h3>
+                            <a href="#">Find a Store</a>
+                        </div>
+                    </div>
+                  <br><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--END NG HELP MODAL-->
+
+<!-- DELIVERY MODAL -->
+<div class="modal fade img-fluid" id="deliveryModal" tabindex="-1" aria-labelledby="deliveryLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <center>
+                <h1 id="deliveryLine" class="textReturns">DELIVERY OPTIONS</h1>
+              </center>
+                <br>
+
+                <p id="textReturns ">What are StreetzMNL’s delivery options?</p>
+                <p>During checkout, we'll provide an estimated delivery date. We'll also include that date in your order confirmation email.</p>
+          
+                <h4>STANDARD</h4>
+                <ul>
+                  <li>Free for orders of ₱7,500 or more</li>
+                  <li>₱250 for orders less than ₱7,500</li>
+                  <li>Arrives in 4–7 business days</li>
+                </ul>
+          
+                <h4>EXPRESS</h4>
+                <ul>
+                  <li>₱750</li>
+                  <li>Arrives in 3–6 business days</li>
+                </ul>
+                
+                <h4>DELIVER TO STORE</h4>
+                <p id="nospaceTop">You can have your order delivered to a nearby Nike store for pick-up. Learn more about our deliver-to-store service.</p>
+                
+                <p id="textReturns">ADDITIONAL INFORMATION</p>
+          
+                <ul>
+                  <li>Orders are processed Monday–Friday, except for national holidays. Be aware that orders may experience longer processing and delivery times during holidays.</li>
+                  <br>
+                  <li>Orders can't be delivered to PO boxes, re-shippers or package-forwarding services.</li>
+                  <br>
+                  <li>Orders can't be delivered to addresses outside the country or region where they were placed as we are only in Philippines.</li>
+                  <br>
+                  <li>Nike By You orders arrive in two to six weeks—standard delivery times do not apply.</li>
+                  <br>
+                  <li>Refunds include the total value of any returned items. Please note that delivery fees are not refundable unless you receive an incorrect item.</li>
+                </ul>
+          
+                <div class="faq-section">
+                  <p>FAQs</p>
+                
+                <div class="faq">
+                    <div class="question" onclick="toggleAnswer(this)">
+                        <span>What are the available delivery options?</span>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="answer">
+                        StreetzMNL offers Standard and Express delivery options. Standard delivery takes 4-7 business days, and Express delivery arrives within 3-6 business days.
+                    </div>
+                </div>
+          
+                <div class="faq">
+                    <div class="question" onclick="toggleAnswer(this)">
+                        <span>How much does delivery cost?</span>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="answer">
+                        Standard delivery is free for orders of ₱7,500 or more, otherwise it costs ₱250. Express delivery is available for ₱750.
+                    </div>
+                </div>
+          
+                <div class="faq">
+                    <div class="question" onclick="toggleAnswer(this)">
+                        <span>How can I track my order?</span>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="answer">
+                        Once your order ships, you'll receive a tracking number via email, which you can use to monitor the status of your delivery.
+                    </div>
+                </div>
+          
+                <div class="faq">
+                    <div class="question" onclick="toggleAnswer(this)">
+                        <span>Do you offer international shipping?</span>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="answer">
+                        Currently, StreetzMNL only ships within the country. We do not offer international shipping at this time.
+                    </div>
+                </div>
+          
+                <div class="faq">
+                    <div class="question" onclick="toggleAnswer(this)">
+                        <span>Can I change my delivery address after placing an order?</span>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="answer">
+                        Unfortunately, once your order has been processed and shipped, we are unable to change the delivery address.
+                    </div>
+                </div>
+                <br><br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--END NG DELIVERY MODAL-->
+
+<!-- RETURNS MODAL -->
+<div class="modal fade img-fluid" id="returnsModal" tabindex="-1" aria-labelledby="returnsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <center>
+                <h1>RETURNS</h1>
+              </center>  
+                <br>
+            
+                <p>What is StreetzMNL's returns policy?</p>
+                <p>StreetzMNL.com and StreetzMNL App purchases can be returned within 30 days (some exceptions apply). To be eligible for a return, items must be in their original condition, unworn and unwashed, with complete accessories, and the original packaging and tags must also be intact and in their original condition. This policy includes custom StreetzMNL By You sneakers.</p>
+                <p>Important: To ensure a smooth return process in case of any issues, we highly recommend recording a video of the unboxing process as you receive and open your package. This video can serve as evidence if the product is damaged, incorrect, or missing items, which will help us address your concerns more efficiently.</p>
+                <p>And remember, returns are always free for StreetzMNL Members—just make sure you sign in during checkout.</p>
+                
+                <p>So go ahead, shop with confidence.</p>
+            
+                <div class="faq-section">
+                    <p>FAQs</p>
+                    
+                    <div class="faq">
+                        <div class="question" onclick="toggleAnswer(this)">
+                            <span>How do I return a StreetzMNL order?</span>
+                            <span class="icon">▼</span>
+                        </div>
+                        <div class="answer">
+                            You can return a StreetzMNL order through our online return portal or by visiting a StreetzMNL store with your receipt.
+                        </div>
+                    </div>
+            
+                    <div class="faq">
+                        <div class="question" onclick="toggleAnswer(this)">
+                            <span>Can I exchange a StreetzMNL order?</span>
+                            <span class="icon">▼</span>
+                        </div>
+                        <div class="answer">
+                            Yes, you can exchange items if they are unworn and in their original condition within 30 days.
+                        </div>
+                    </div>
+            
+                    <div class="faq">
+                        <div class="question" onclick="toggleAnswer(this)">
+                            <span>Can I return items after 30 days?</span>
+                            <span class="icon">▼</span>
+                        </div>
+                        <div class="answer">
+                          StreetzMNL offers a 30-day return policy. After this period, exceptions are made only for defective or flawed products.
+                        </div>
+                    </div>
+            
+                    <div class="faq">
+                        <div class="question" onclick="toggleAnswer(this)">
+                            <span>How do I return a defective or flawed product?</span>
+                            <span class="icon">▼</span>
+                        </div>
+                        <div class="answer">
+                            Defective or flawed products can be returned at any time for a full refund or exchange.
+                        </div>
+                    </div>
+            
+                    <div class="faq">
+                        <div class="question" onclick="toggleAnswer(this)">
+                            <span>How do I return a StreetzMNL store purchase?</span>
+                            <span class="icon">▼</span>
+                        </div>
+                        <div class="answer">
+                            For in-store purchases, please return the item with your receipt to the store where you purchased it.
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--END RETURNS MODAL-->
+
+<!-- FEEDBACK MODAL -->
+<div class="modal fade img-fluid" id="termsSaleModal" tabindex="-1" aria-labelledby="termsSaleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <center>
+                <h1  id="returnLine" class="textReturns">TERMS OF SALE</h1>
+              </center>  
+                <br>
+                <p>This page provides you information about U.S. Direct E-Commerce Limited, trading as eShopWorld (“eShopWorld”, “we”, “our” and/or “us”), and the terms and conditions (the "Terms") on which we sell products in accordance with section 2.1 below ("Products") through our website ("our site") to you. These Terms will apply to any contract between us for the sale of Products to you ("Contract"). Before using our site, please read these Terms carefully and make sure that you understand them. </p>
+                <p>Please note that before placing an order or making a payment you will be asked to agree to these Terms. If you refuse to accept these Terms, you will not be able to order any Products from our site or make any payments related thereto.</p>
+                <p>You should view, read and print a copy of these Terms or save them to your computer for future reference. We may amend these Terms from time to time as set out below. Every time you wish to order Products or use our site, please check these Terms to ensure you understand the terms which will apply at that time.</p>
+                <p>If there is any discrepancy between the terms of this document in any other language and the English translated version of this document, the terms of the English version shall prevail.</p>
+
+                <h5>1. INFORMATION ABOUT US</h5>
+                <p>1.1 We are U.S. Direct E-Commerce Limited trading as eShopWorld, a company registered in Philippines under company registered number 689309 and with our registered office at Manila</p>
+                
+                <p>1.3 Contacting Us</p>
+                <div class="contact-section">
+                  <p>1.3.1 &nbsp;&nbsp; If you wish to contact us for any other reason, including because you have a complaint, please do so by e-mailing us at <a href="mailto:info@eshopworld.com">info@eshopworld.com</a>.</p>
+                  <p>1.3.2 &nbsp;&nbsp; If we have to contact you or give you notice in writing, we will do so by e-mail or by post to the address you provide to us in your order.</p>
+                </div>
+
+                <br>
+                <h5>2. HOW THE CONTRACT IS FORMED BETWEEN YOU AND US</h5>
+                <p>2.1 &nbsp;&nbsp; We contract with retailers worldwide, so as to make such retailer's merchandise available in your country. In doing this we can provide you with landed cost visibility in multiple currencies on transactions involving such retailer's merchandise.</p>
+                <p>2.2 &nbsp;&nbsp; By placing an order with us through our site, you acknowledge that your transaction will be with us and not with the respective retailer. You further acknowledge that upon successful verification by us of the authenticity and sufficiency of the information you provide, we will then purchase the merchandise from the respective retailer for the sole purpose of immediately reselling it to you for the amounts presented and agreed-upon when you submitted your order. We will be responsible for fulfilling the order to you.</p>
+                <p>2.3 &nbsp;&nbsp; Our site will guide you through the steps you need to take to place an order and make apayment with us. Our order process allows you to check and amend any errors before submitting your order to us. Please take the time to read and check your order at each pageof the order process.</p>
+                <p>2.4 &nbsp;&nbsp; After you place an order, you will receive an e-mail from us acknowledging that we have received your order. The Contract between us will only be formed when you receive your order confirmation email. </p>
+                <P>2.5 &nbsp;&nbsp; We will send you an e-mail that confirms that the Products have been dispatched ("Dispatch Confirmation").</P>
+                <P>2.6 &nbsp;&nbsp; If we are unable to supply you with a Product, for example because that Product is not in stock or no longer available or because of an error in the price on our site or the respective retailer’s site, we will inform you of this by e-mail and we will not process your order. If you have already paid for the Products, we will refund you the full amount including any delivery costs charged as soon as possible and will incur no further liability to you.</P>
+                <p>2.7 &nbsp;&nbsp; You acknowledge that we shall be permitted to verify the authenticity and sufficiency of the information you provide, and if we are unable to verify the information automatically, our representatives may contact you and/or your debit or credit card issuing bank to confirm your identity and/or your intent to place the order.</p>
+                <p>2.8 &nbsp;&nbsp; Please note that any Products made available through our site are intended for non-commercial use, and purchase of any Products for resale purposes is strictly prohibited.</p>
+                <p>2.9 &nbsp;&nbsp; By placing an order or making a payment through our site, you warrant that you are legally capable of entering into binding contracts. Your credit/debit card or other payment method will be billed by us and charges on your statement will be accompanied by the description "eShopWorld", “eSW”, or similar. You warrant that all the information provided to us for the purpose of processing payments is correct and you are authorized to utilize the proffered payment method. You acknowledge that we will be entitled to verify the authenticity and sufficiency of the payment information you provide.</p>
+                <p>2.10 &nbsp;&nbsp; You acknowledge and agree that we shall conduct pre-payment screening on you and the information you have provided. These checks are designed to prevent eShopWorld from conducting business with a sanctioned individual, entity or country in violation of any applicable laws and regulatory requirements in the territories we operate (including without limitation all customs laws and regulations and export and import controls administered by the U.S. government (including, but not limited to, the Export Administration Regulationsunder the U.S. Department of Commerce), the European Union and any other applicable jurisdiction).</p>
+                <p>2.11 &nbsp;&nbsp; We provide the service of determining the appropriate taxes and duties to be applied to the importation of the Product by you, and to collect, report and remit these taxes and duties, as applicable, on your behalf, to the appropriate tax authority. For imports into the European Union and the United Kingdom, the resulting taxes and duties are included in your payment and are paid by eShopWorld and there are no additional costs. By accepting these Terms, you authorise eShopWorld to accept any additional claims for levies (additional assessment) from the relevant customs authorities. For certain non-European imports, you will be responsible for the remittance of taxes and duties to the appropriate tax authority. All Products purchased from us are made pursuant to a shipment contract. Title to the Products shall transfer from the relevant retailer to eShopWorld after exportation of the Products. Title subsequently transfers from eShopWorld to you prior to importation of the Product and you shall be the importer of record (save for delivery to Switzerland, where eShopWorld will be the importer of record). Risk of loss in the Product passes to you when the Product is delivered to you.</p>
+                <p>2.12 &nbsp;&nbsp; By ordering Products from us, you hereby authorize a licensed customs broker chosen by us to act as your agent and transact business with foreign revenue authorities to clear your Products, account for duties and taxes on your behalf, if applicable return your Products and if applicable, prepare and submit refund claims on your behalf for any merchandise that you return. Please note that this section 2.12 excludes customers in Canada and Russia; customers in Canada should refer to section 6.10 and customers in Russia should refer to sections 6.11 and 6.12. </p>
+                <p>2.13 &nbsp;&nbsp; The price of your order will be quoted including or excluding taxes depending on the delivery address: (a) Products delivered within Canada will be quoted exclusive of sales tax; and (b) Products delivered within Europe will be quoted inclusive of value added tax. Shipping costs are not included in the price; these will be added at the checkout and will be indicated as a separate charge on your order form (except, in circumstances where free shipping is offered).</p>
+                
+                <br>
+                <h5>3. TERMS OF USE OF OUR SITE</h5>
+                <p>3.1 &nbsp;&nbsp; Please read these Terms of Use carefully before you start to use this website. By using our site, you indicate that you accept these Terms of Use and that you accept and agree to abide by them. If you do not agree to the Terms of Use, please immediately cease all usage of this site.</p>
+                <p>3.2 &nbsp;&nbsp; We do not guarantee that our site or any content on it will always be available or be uninterrupted. Access to our site is permitted on a temporary basis, and we reserve the right to withdraw, discontinue or change all or any part of the site without notice. We will not be liable to you if for any reason all or any of our sites are unavailable at any time or for any period.</p>
+                <p>3.3 &nbsp;&nbsp; You are responsible for making all the necessary arrangements for you to have access to our site. You are also responsible for ensuring that all persons who access our site through your internet connection are aware of these Terms, and that they comply with them. </p>
+                <p>3.4 &nbsp;&nbsp; We may revise these Terms at any time by amending this page. Please check this page from time to time to take notice of any changes we made, as they are binding on you. </p>
+                <p>3.5 &nbsp;&nbsp; We may update our site from time to time and may change the content at any time.</p>
+                <p>3.6 &nbsp;&nbsp; Access to certain areas of our site is restricted. We reserve the right to restrict access to other areas of our site, or indeed the whole site, at our discretion.</p>
+                <p>3.7 &nbsp;&nbsp; The use of our sites by a minor (an individual under 18 years of age) is subject to the consent of their parent or guardian and our contract is with the parent or guardian, who is responsible for the minor's compliance. We advise parents or guardians who permit minors to use the site that it is important that they communicate with minors about their safety online, as moderation or vetting of advertisements is not guaranteed or fool-proof. Minors who are using any interactive service should be made aware of the potential risks to them. </p>
+                <p>3.8 &nbsp;&nbsp; You must not use our site in any way that causes, or may cause, damage to the site or impairment of the availability or accessibility of the site; or in any way which is unlawful, illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful purpose or activity including but not limited to using our site to copy, store, host, transmit, send, use, publish or distribute any material; gaining unauthorized access to our site; collecting data from our site; sending unsolicited commercial communications via our site; and/or without limitation performing any act that is inconsistent with the purpose of this site: to take in and fulfil consumer orders. </p>
+                <p>3.9 &nbsp;&nbsp; Where necessary we will report any breach of these Terms to the relevant law enforcement authorities and we will co-operate with those authorities by disclosing your identity and/or your personal information to them. In the event of such a breach, your right to use our site will cease immediately. </p>
+                <p>3.10 &nbsp;&nbsp; We reserve all rights, title and interests in our and our affiliates' intellectual property rights including without limitation, any patents, trademarks, service marks, copyright, database rights, design rights, know-how, confidential information and any other similar protected rights in any country. </p>
+
+                <br>
+                <h5>4. WHAT YOU AUTHORISE US TO DO</h5>
+                <p>4.1 &nbsp;&nbsp; By using our site, you authorise us to process payments, refunds and adjustments for your transactions, remit funds to your bank account where applicable, charge your credit card or debit the account linked to your debit card, as applicable, and pay us and our affiliates any amounts you owe in accordance with these Terms. </p>
+                <p>4.2 &nbsp;&nbsp; We may at any time require you to provide any financial, business or personal information we request to verify your identity. You will not impersonate any person or use a name which you are not legally authorised to use. You authorise us to verify your information (including any updated information) and to obtain an initial credit authorisation from your credit card issuer. </p>
+
+                <br>
+                <h5>5. SHIPPING AND DELIVERY</h5>
+                <p>5.1 &nbsp;&nbsp; Your Dispatch Confirmation will contain delivery information which will allow you to track the delivery of your Products (where such service is made available). Occasionally our delivery to you may be affected by an Event Outside Our Control. See section 9 for our responsibilities when this happens. </p>
+                <p>5.2 &nbsp;&nbsp; If no one is available at your address to take delivery, the carrier may leave a delivery attempt notice to advise that the merchandise has been returned to their local depot. If this occurs, please contact the carrier at the number listed on the delivery attempt notice. If you have further issues, please contact eShopWorld on info@eshopworld.com.</p>
+                <p>5.3 &nbsp;&nbsp; Delivery of an order shall be completed when we deliver the Products to the address you gave us, or you collect such Products from us. </p>
+                <p>5.4 &nbsp;&nbsp; Occasionally, part of an order may be out of stock or backordered by the respective retailer. We are not responsible for delays in your order due to backorder situations or delays caused by the retailer, and shipments of your Products will only be made after the Products have arrived at our depot. </p>
+                <p>5.5 &nbsp;&nbsp; Products are shipped to you based on the information which you provide to us and you are responsible for the accuracy of such information. If any regulations are breached (including but not exclusively export/import regulations) due to inaccurate information provided by you then you are responsible for such breach. </p>
+                <p>5.6 &nbsp;&nbsp; Our carrier may contact you to arrange deliveries, confirm delivery details and rearrange deliveries (where applicable) from time to time. </p>
+                <p>5.7 &nbsp;&nbsp; If you have chosen cash on delivery as your preferred method of delivery and payment (where such option is available):</p>
+                <div class="contact-section">
+                  <p>5.7.1 &nbsp;&nbsp; we have discretion to reject certain modes of payment;</p>
+                  <p>5.7.2 &nbsp;&nbsp; we only accept payments in the local currency; and/or</p>
+                  <p>5.7.3 &nbsp;&nbsp; should you not accept the Order or make full payment at the time of delivery, we reserve the right to refuse to deliver the Products. </p>
+                </div>
+                
+                <br>
+                <h5>6. RETURNS AND CANCELLATION RIGHTS</h5>
+                <p>6.1 &nbsp;&nbsp; Details on how you can cancel your order or return your Products (where permissible) including the address to which Products must be returned, will be provided on the checkout page, in your order confirmation e-mail and/or your Dispatch Confirmation via the link to the returns portal, (the “Return Merchandise Portal”). </p>
+                <p>6.2 &nbsp;&nbsp; Returns must only be sent to the address indicated on the Return Merchandise Portal. These details will be provided with the delivery package containing your order or in the Dispatch Confirmation email (which will contain a link to the Return Merchandise Portal). </p>
+                <P>6.3 &nbsp;&nbsp; Returned Products must be in new condition with tags attached and must be accompanied by the original receipt or invoice. All returned Products are sent at your own risk. If you have received a return label, you must use the return label provided to you via the Return Merchandise Portal. </P>
+                <p>6.4 &nbsp;&nbsp; All refunds are subject to inspection and verification within our return centres. If the returned Products are not fully resaleable or the packaging is damaged, we reserve the right to refuse a refund. </p>
+                <p>6.5 &nbsp;&nbsp; Only in cases where the details of the returned Products have been provided within the Return Merchandise Portal will we reimburse you.</p>
+                <p>6.6 &nbsp;&nbsp; You will be refunded by us to the credit/debit card or other payment method provided by you when the order was originally placed. The refund will be processed as soon as practicable but within fourteen (14) working days of the Product arriving to the return centre in a perfect resalable condition. </p>
+                <P>6.7 &nbsp;&nbsp; Deductions may be made from refunds where such returned Products are returned in an unacceptable condition. /P>
+                <p>6.8 &nbsp;&nbsp; We acknowledge that any Products returned on the basis of being faulty shall not be subject to this section and no provisions within these Terms shall affect your statutory consumer rights. All returns of faulty Products will be governed under the Sale of Goods and Services Act 1980. </p>
+                <p>6.9 &nbsp;&nbsp; Certain goods may not be suitable for return. In the event that a Product is not suitable for returning, please refer to your order confirmation email and you will be advised as to how your refund may be processed in accordance with the policies and procedures set out therein. </p>
+
+                <br>
+                <h5>7. CONSUMER RIGHT OF RETURN AND REFUND</h5>
+                <p>7.1 &nbsp;&nbsp; Subject to section 7.2 below, you shall have a legal right to a "cooling off" period during which you may cancel your order for any reason without penalty for up to fourteen (14) days after the order has been received. </p>
+                <p>7.2 &nbsp;&nbsp; Your right of cancellation shall only apply in circumstances where we are legally obliged to provide such a right to you in your respective jurisdiction. The right to return (or exchange) Products under this section does not apply to Products (i) made to your specification; or (ii) which have been personalised; or (iii) which by reason of their nature cannot be returned or are liable to deteriorate or expire rapidly; or (iv) where sealed Products have been supplied which are not suitable for return due to health protection or hygiene reasons, if they become unsealed after delivery. </p>
+                <p>7.3 &nbsp;&nbsp; To cancel a Contract, you just need to let us know that you have decided to cancel. The easiest way to do this is to complete the Cancellation Form on our Return Merchandise Portal. A link to the Return Merchandise Cancellation Form will be included in your order confirmation e-mail and/or your Dispatch Confirmation email. If you use this method, we will e-mail you to confirm we have received your order cancellation. </p>
+                <p>7.4 &nbsp;&nbsp; If you have already received the Products that form the cancelled contract, you will be required to return the Products to us in order to be eligible for refund. You are responsible for the shipping and handling costs associated with sending your cancelled order back to eShopWorld. This does not apply if you have received an eShopWorld nominated or prepaid label. </p>
+                <p>7.5 &nbsp;&nbsp; If you cancel your Contract, we will:</p>
+                <div class="contact-section">
+                  <p>7.5.1 &nbsp;&nbsp; refund you the price you paid for the Products;</p>
+                  <p>7.6.2 &nbsp;&nbsp; refund the amount of duties and taxes that were paid;</p>
+                  <p>7.7.3 &nbsp;&nbsp; refund any costs you have paid for delivery to you, although, as permitted by law, the maximum refund will be the costs of delivery by the least expensive delivery method.</p>
+                </div>
+                <p>7.7 &nbsp;&nbsp; Refunds will be issued within fourteen (14) days of the Product arriving to the return centre in a perfect resalable condition. </p>
+
+                <br>
+                <h5>8. PRODUCT WARRANTIES AND OUR LIABILITY</h5>
+                <p>8.1 &nbsp;&nbsp; Any warranty related issues arising in respect of a Product should be communicated to the respective retailer's customer support team. In these circumstances, we will provide a refund or replace the product as appropriate and solely upon instruction from the retailer. </p>
+                <p>8.2 &nbsp;&nbsp; ALL PRODUCT DESCRIPTIONS AND SPECIFICATIONS ARE PROVIDED TO US BY THE RETAILER. WE DO NOT WARRANT THE ACCURACY, RELIABILITY, OR COMPLETENESS OF SUCH DESCRIPTION OR SPECIFICATION. WE PROVIDE NO WARRANTIES, GUARANTEES OR COVENANTS OF ANY KIND RELATING TO THE FITNESS, QUALITY, SAFETY, OR INABILITY TO USE, OR INABILITY TO HAVE REPAIRED OR SERVICED, ANY PRODUCT PURCHASED BY YOU. TO THE MAXIMUM EXTENT ALLOWED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, RELATING TO FITNESS, QUALITY, OR SAFETY OF THE PRODUCT, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. TO THE FULLEST EXTENT PERMITTED AT LAW, WE WILL NOT BE LIABLE (WHETHER IN CONTRACT, TORT (INCLUDING, BUT NOT LIMITED TO NEGLIGENCE), OR UNDER ANY STATUTORY IMPLIED TERM) FOR ANY DAMAGES OF ANY KIND INCLUDING WITHOUT LIMITATION DIRECT, INDIRECT, INCIDENTAL, PUNITIVE, SPECIAL AND CONSEQUENTIAL DAMAGES (INCLUDING, WITHOUT LIMITATION, LOSS OF PROFITS, LOSS OF REVENUE OR LOSS OF DATA) ARISING OUT OF OR IN CONNECTION WITH ANY PRODUCTS PURCHASED OR OBTAINED, WHETHER OR NOT WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. OUR MAXIMUM LIABILITY TO YOU IS THE AMOUNT CHARGED TO YOUR CREDIT CARD OR OTHER FORM OF PAYMENT. DESPITE ANYTHING ELSE CONTAINED IN THESE TERMS. NEITHER PARTY EXCLUDES ANY LIABILITY FOR DEATH OR PERSONAL INJURY TO THE EXTENT ONLY THAT IT ARISES AS A RESULT OF THE NEGLIGENCE OF THAT PARTY, ITS EMPLOYEES, AGENTS OR AUTHORISED REPRESENTATIVES. </p>
+                <p>8.3 &nbsp;&nbsp; To the extent permitted by law, we exclude all conditions, warranties, representations or other terms which may apply to our site or any content on it, whether express or implied.</p>
+                <p>8.4 &nbsp;&nbsp; We will not be liable to any user for any loss or damage, whether in contract, tort (including negligence), breach of statutory duty, or otherwise, even if foreseeable, arising under or in connection with: </p>
+                <div class="contact-section">
+                  <p>8.4.1 &nbsp;&nbsp; use of, or inability to use, our site; or</p>
+                  <p>8.4.2 &nbsp;&nbsp; use of or reliance on any content displayed on our site.</p>
+                </div>
+                <p>8.5 &nbsp;&nbsp; We will not be liable for any loss or damage caused by a virus, distributed denial-of-service attack, or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of our sites or to your downloading of any content on it, or on any website linked to it. </p>
+                <p>8.6 &nbsp;&nbsp; We assume no responsibility for the content of websites linked on our sites. Such links should not be interpreted as endorsement by us of those linked websites. We will not be liable for any loss or damage that may arise from your use of them. </p>
+
+                <br>
+                <h5>9. EVENTS OUTSIDE OUR CONTROL</h5>
+                <p>9.1 &nbsp;&nbsp; We will not be liable or responsible for any failure to perform, or delay in performance of, any of our obligations under a Contract that is caused by an Event Outside Our Control. An Event Outside Our Control is defined below in section 9.2.</p>
+                <p>9.2 &nbsp;&nbsp; An "Event Outside Our Control" means any act or event beyond our reasonable control, including without limitation strikes, lock-outs or other industrial action by third parties, civil commotion, riot, invasion, terrorist attack or threat of terrorist attack, war (whether declared or not) or threat or preparation for war, fire, explosion, storm, flood, earthquake, subsidence, epidemic, pandemic, health crisis or other natural disaster, or failure of public or private telecommunications networks, backorder situations or delays caused by the retailer or impossibility of the use of railways, shipping, aircraft, motor transport or other means of public or private transport. </p>
+                <p>9.3 &nbsp;&nbsp; If an Event Outside Our Control takes place that affects the performance of our obligations under a Contract: </p>
+                <div class="contact-section">
+                  <p>9.3.1 &nbsp;&nbsp; you will be contacted as soon as reasonably possible to notify you; and</p>
+                  <p>9.3.2 &nbsp;&nbsp; our obligations under a Contract will be suspended and the time for performance of our obligations will be extended for the duration of the Event Outside Our Control. Where the Event Outside Our Control affects our delivery of Products to you, we will arrange a new delivery date with you after the Event Outside Our Control is over. </p>
+                  <p>9.3.3 &nbsp;&nbsp; 9.3.3 you may cancel a Contract affected by an Event Outside Our Control which has continued for more than 30 days from the date of order. To cancel please contact us. If you opt to cancel, you will have to return any relevant Products you have already received (where appliable in accordance with these terms and conditions), and we will refund the price you have paid, including any delivery charges (whereapplicable).<p>
+                </div>
+
+                <br>
+                <h5>10. DANGEROUS GOODS (PERFUME AND FRAGRANCES)</h5>
+                <p>10.1 &nbsp;&nbsp; International authorities such as UNECE and the IATA Dangerous Goods Regulations classify Products containing fragrances and perfumes as dangerous goods (“Dangerous Goods”) and as such these Dangerous Goods are subject to strict shipment requirements. The returns process for Dangerous Goods differs from the returns process for non-Dangerous Goods.</p>
+
+                <br>
+                <h5>11. PERSONALISED PRODUCTS</h5>
+                <p>11.1 &nbsp;&nbsp; The ability of eShopWorld to fulfil any personalised Order is subject to availability of</p>
+                <div class="contact-section">
+                  <p>11.1.1 &nbsp;&nbsp; the Product/stock; and</p>
+                  <p>11.1.2 &nbsp;&nbsp; the materials requested/required.</p>
+                </div>
+                <p>11.2 &nbsp;&nbsp; The manufacturing time and/or the shipping time of any such Products may be affected due to Product or material constraints. </p>
+
+                <br>
+                <h5>12. INDEMNITY</h5>
+                <p>12.1 &nbsp;&nbsp; You hereby indemnify us and undertake to keep us indemnified against any losses, damages, costs, liabilities and expenses (including without limitation legal expenses and any amounts paid by us to a third party in settlement of a claim or dispute on the advice of our legal advisers) incurred or suffered by us arising out of any breach by you of any provision of these Terms, or arising out of any claim that you have breached any provision of these Terms. </p>
+                
+                <br>
+                <h5>13. BREACHES OF THESE TERMS OF USE</h5>
+                <p>13.1 &nbsp;&nbsp; Without prejudice to our other rights under these Terms, if you breach these Terms in any way, we may take such action as we deem appropriate to deal with the breach, including suspending your access to our site, prohibiting you from accessing our site, blocking computers using your IP address from accessing our site, contacting your internet service provider to request that they block your access to our site and/or bringing court proceedings against you. </p>
+
+                <br>
+                <h5>14. ONLINE DISPUTE RESOLUTION</h5>
+                <p>14.1 &nbsp;&nbsp; The EU (Online Dispute Resolution for Consumer Disputes) Regulations 2015 requires all traders established in the European Union, who engage in online sales or services contracts, and all online marketplaces established within the European Union to provide:</p>
+                <div class="contact-section">
+                  <p>14.1.1 &nbsp;&nbsp; an electronic link to the ODR Platform which is available at <a href="http://ec.europa.eu/consumers/odr/">http://ec.europa.eu/consumers/odr/</a></p>
+                  <p>14.1.2 &nbsp;&nbsp; If you wish to contact eShopWorld directly regarding your Online Dispute you cando so at <a href="Compliance@eshopworld.com">Compliance@eshopworld.com</a>.</p>
+                </div>
+                
+                <br>
+                <h5>15. OTHER IMPORTANT TERMS</h5>
+                <p>15.1 &nbsp;&nbsp; We may transfer our rights and obligations under a Contract to another organisation, but this will not affect your rights or our obligations under these Terms. </p>
+                <p>15.2 &nbsp;&nbsp; This Contract is between you and us. No other person shall have any rights to enforce any of its terms.</p>
+                <p>15.3 &nbsp;&nbsp; We only use your personal information in accordance with our Privacy Statement. Please take the time to read our Privacy Statement carefully, as it includes important terms which apply to you. The retailer may also use your personal information, in accordance with their own separate Privacy Policy which can be found on their website. </p>
+                <p>15.4 &nbsp;&nbsp; Each of the paragraphs of these Terms operates separately. If any court or relevant authority decides that any of them are unlawful or unenforceable, the remaining paragraphs will remain in full force and effect. </p>
+                <p>15.5 &nbsp;&nbsp; Nothing expressed or mentioned in or implied from these Terms is intended or shall be construed to give to any person other than the parties hereto any legal or equitable right, remedy or claim under or in respect to these Terms. These Terms and all of the representations, warranties, covenants, conditions and provisions hereof are intended to be and are for the sole and exclusive benefit of us, our affiliates and you. </p>
+                <p>15.6 &nbsp;&nbsp; If we fail to insist that you perform any of your obligations under these Terms, or if we do not enforce our rights against you, or if we delay in doing so, that will not mean that we have waived our rights against you and will not mean that you do not have to comply with those obligations.</p>
+                <p>15.7 &nbsp;&nbsp; Please note that these Terms are governed by Irish law. This means a Contract for the purchase of Products through our site and any dispute or claim arising out of or in connection with it will be governed by Irish law. You and we both agree that the courts of Ireland will have non-exclusive jurisdiction. </p>
+
+                <br><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRIVACY POLICY MODAL -->
+<div class="modal fade img-fluid" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="mt-4">STREETZMNL PRIVACY POLICY AND COOKIE POLICY</h1>
+                <p class="mt-3">This privacy policy describes the personal data collected or generated (processed) when you interact with STREETZMNL through our websites (“Sites”), digital experiences, mobile applications, stores events, or one of our other products or services, all of which are part of StreetzMNL’s Platform (“Platform”). It also explains how your personal data is used, shared and protected, what choices you have relating to your personal data and how you can contact us.</p>
+                  <ul class="mt-4">
+                    <li><a href="#responsible-processing">WHO is Responsible for the Processing of Your Personal Data?</a></li>
+                    <li><a href="#tools-management">WHAT Personal Data Do We Collect and WHEN?</a></li>
+                    <li><a href="#use-collect-data">TOOLS to Manage What Personal Data We Collect</a></li>
+                    <li><a href="#why-personal-data">WHY and HOW Do We Use Your Personal Data?</a></li>
+                    <li><a href="#share-data">SHARING of Your Personal Data</a></li>
+                    <li><a href="#protect-data">PROTECTION and MANAGEMENT of Your Personal Data</a></li>
+                    <li><a href="#rights-data">YOUR RIGHTS Relating to Your Personal Data</a></li>
+                    <li><a href="#cookies">COOKIES and Pixel Tags</a></li>
+                    <li><a href="#thirdparty">USING StreetzMNL Platform with Third-Party Products and Services</a></li>
+                    <li><a href="#changes-to">CHANGES to Our Privacy Policy</a></li>
+                    <li><a href="#q&a-feedback">QUESTIONS and Feedback</a></li>
+                  </ul>
+                <h2 id="responsible-processing">WHO is Responsible for the Processing of Your Personal Data?</h2>
+                <p>The STREETZMNL entity responsible for the processing of your personal data will depend on how you interact with STREETZMNL's Platform and where you are located in the world. The relevant STREETZMNL entity are referred to as “STREETZMNL”, “our”, “we” or “us” in this privacy policy.</p>
+                <h2 id="tools-management">WHAT Personal Data Do We Collect and WHEN?</h2>
+                <p>We ask you for certain personal data to provide you with the products or services you request. For example, when you make purchases, contact our consumer services, request to receive communications, create an account, participate in our events or contests, or use our Platform. Additionally, when you request specific services in store, we may ask you to log in to provide services that are then associated with your account (e.g. size, fit, preferences).</p>
+                <p>This personal data includes:</p>
+                  <ul>
+                    <li>Contact details including name, email, telephone number, and shipping and billing address;</li>
+                    <li>Login and account information, including screen name, password, and unique user ID;</li>
+                    <li>Personal details including gender, hometown, date of birth, and purchase history;</li>
+                    <li>Payment or credit card information;</li>
+                    <li>Images, photos, and videos;</li>
+                    <li>Data on physical characteristics, including weight, height, and body measurements (such as estimated stride and shoe/foot measurements or apparel size);</li>
+                    <li>Fitness activity data provided by you or generated through our Platform (time, duration, distance, location, calorie count, pace/stride);</li>
+                    <li>Personal preferences including your wish list as well as marketing and cookie preferences.</li>
+                  </ul>
+                <p>We collect additional personal data from you to enable particular features within our Platform. For example, we request access to your phone’s location data to log your run route, your contacts to allow you to interact with your friends, your calendar to schedule a training plan, or your social network credentials to post content from our Platform to a social network. This personal data includes:</p>
+                  <ul>
+                    <li>Movement data from your device’s accelerometer;</li>
+                    <li>Photos, audio, contacts, and calendar information;</li>
+                    <li>Sensor data, including heart rate and (GPS) location data; or</li>
+                    <li>Social network information, including credentials and any information from your public posts about STREETZMNL or your communications with us.</li>
+                  </ul>
+                <p>When interacting with our Platform, certain data is automatically collected from your device or web browser. More information about these practices is included in the “Cookies and Pixel Tags” section of this privacy policy below. This data includes:</p>
+                  <ul>
+                    <li>Device IDs, call state, network access, storage information, and battery information; and</li>
+                    <li>Cookies, IP addresses, referrer headers, data identifying your web browser and version, web beacons, tags, and interactions with our Platform.</li>
+                  </ul>
+                <h2 id="use-collect-data">TOOLS to Manage What Personal Data We Collect</h2>
+                <p>When using our Platform, we also provide in-time notice or obtain consent for certain practices. For example, we will obtain consent to use your location or send push notifications. We may obtain this consent through the Platform or using the standard permissions available on your device.</p>
+                <p>In many cases, your web browser or mobile device platform will provide additional tools to allow you to control when your device collects or shares particular categories of personal data. For example, your mobile device or web browser may offer tools to allow you to manage cookie usage or location sharing. We encourage you to familiarize yourself with and use the tools available on your devices.</p>
+                <h2 id="why-personal-data">WHY and HOW Do We Use Your Personal Data?</h2>
+                <p>We use your personal data in the following ways:</p>
+                <h4>To Provide the Features of the Platform and Services You Request</h4>
+                <p>When you use our Platform, we will use your personal data to provide the requested product or service. For example, if you make a purchase on StreetzMNL.com or participate in an event or promotion, we will use the contact information you give us to communicate with you about the purchase, event, or promotion. If you contact our consumer services, we will use information about you, such as delivery or payment information, or the product you have purchased to help you resolve a problem or question.</p>
+                <p>If you use our Platform to track your fitness activity or physical characteristics, we will collect this personal data and store it so that you can review it in the Platform. Your fitness activity data may include data about your activity or data collected by your device during your activity such as location data and movement data. We may use this activity data to calculate further information about your activity, such as distance run, or calories burned, so that the calculated information can be provided to you as part of the functionality of the Platform.</p>
+                <p>In many cases, to use particular features within our Platform you may need to provide STREETZMNL with additional data or additional consent to use particular data in a certain way. For example, to use the heart rate tracking features of our Platform, you may need to connect to a heart rate monitoring device. Similarly, to share content on social media, you may be required to provide your social media account credentials to sign in.</p>
+                <h4>To Communicate Information about our Products, Services, Events and for Other Promotional Purposes</h4>
+                <p>When you consent, we will send you marketing communications and news concerning STREETZMNL's products, services, events and other promotions that may be of interest to you. You can opt-out at any time after you have given your consent.</p>
+                <h4>Direct Marketing</h4>
+                <p>If you are an existing customer of StreetzMNL (for example, if you have placed an order with us), we may use the contact details you provided to send you marketing communications about similar STREETZMNL products or services where permitted by applicable law (unless you have opted-out). In other cases, we ask for your consent to send you marketing information.</p>
+                <h4>Personalization</h4>
+                <p>We may use the information that you provide to us as well as information from other STREETZMNL products or services – such as your use of STREETZMNL’s Platform, your visits to or purchases made in STREETZMNL stores, your participation in events and contests – to personalize communications on products and services that may be interesting for you. In doing so, we may combine the information you provide to us with information that we create about your online activity, including internal insights and analysis.</p>
+
+                <h4>To Operate, Improve and Maintain our Business, Products and Services</h4>
+                <p>We use the personal data you provide to us to operate our business. For example, when you make a purchase, we use that information for accounting, audits and other internal functions. We may use personal data about how you use our products and services to enhance your user experience and to help us diagnose technical and service problems and administer our Platform.</p>
+
+                <h4>To Protect Our or Others' Rights, Property or Safety</h4>
+                <p>We may also use personal data about how you use our Platform to prevent, detect or investigate fraud, abuse, illegal use, violations of our Terms of Use, and to comply with court orders, governmental requests or applicable law.</p>
+
+                <h4>For General Research and Analysis Purposes</h4>
+                <p>We use data about how our visitors use our Platform and services to understand customer behavior or preferences. For example, we may use information about how visitors to STREETZMNL.com search for and find products to better understand the best ways to organize and present product offerings in our storefront.</p>
+
+                <h4>Use (Processing) of Workout Info</h4>
+                <p>As discussed above, STREETZMNL collects data about your fitness activity or your physical characteristics, together, “Workout Info”, to provide our services on our Platform. Because of the personal nature of this data, we strive to provide you with clear information about how Workout Info will be used. As this data may be considered sensitive in certain jurisdictions, we take appropriate measures in protecting and using this data and, where required by applicable law or under STREETZMNL’s internal policies, will obtain your consent for use of your Workout Info. Click <a href="#">here</a> to learn more.</p>
+
+                <h4>Other Purposes</h4>
+                <p>We may also use your personal data in other ways and will provide specific notice at the time of collection and obtain your consent where necessary.</p>
+
+                <h4>Legal Grounds</h4>
+                <p>To process your personal data, we rely on certain legal grounds, depending on how you interact with our Platform.</p>
+                  <ul>
+                    <li>When you purchase STREETZMNL products from our Platform, we need your personal data to fulfill our contract with you. For example, we need your payment and contact details to deliver your order.</li>
+                    <li>When you use our Apps, we rely on your consent for processing and for certain limited purposes to fulfill our contract with you (for example, for in-App purchases).</li>
+                    <li>We also rely on other legal grounds, such as our legitimate interests as a business to process information about the effectiveness of our marketing campaigns, our products, services, and other promotional initiatives; to operate, improve and maintain our business, products and services; to protect our or others' rights, property or safety; and for general research and analysis purposes. When processing personal data for our legitimate interests, we take appropriate measures to ensure that the interests we pursue are balanced with your interests, rights, and freedoms, which we are happy to explain upon request.</li>
+                    <li>We also process your personal data, to comply with a legal obligation, or to protect your vital interests.</li>
+                  </ul>
+
+                <h2 id="share-data">SHARING of Your Personal Data</h2>
+                <h4>StreetzMNL’s's Sharing</h4>
+                <p>StreetzMNL shares your personal data with:</p>
+                  <ul>
+                    <li>StreetzMNL entities for the purposes and under the conditions outlined above.</li>
+                    <li>Service providers processing personal data on STREETZMNL’s behalf, for example to process credit cards and payments, shipping and deliveries, host, manage and service our data, distribute emails, research and analysis, manage brand and product promotions as well as administering certain services and features. When using service providers we enter into agreements that require them to implement appropriate technical and organizational measures to protect your personal data.</li>
+                    <li>Other third parties to the extent necessary to: (i) comply with a government request, a court order or applicable law; (ii) prevent illegal uses of our Platform or violations of our Platform’s Terms of Use and our policies; (iii) defend ourselves against third party claims; and (iv) assist in fraud prevention or investigation (e.g., counterfeiting).</li>
+                    <li>Third-party targeted advertising providers that provide personalization ad tailored advertising services to us. We use such services to match information that we hold with personal data in their databases to create custom audiences and tailor advertising to your interests on the Internet, including social media, as permitted by applicable law. You may opt-out of personalized advertising and custom audiences by using the relevant settings in our Platform.</li>
+                    <li>To any other third party where you have provided your consent.</li>
+                  </ul>
+                <p>We may also transfer personal data we have about you in the event we sell or transfer all or a portion of our business or assets (including in the event of a reorganization, spin-off, dissolution or liquidation).</p>
+
+                <h4>Your Sharing</h4>
+                <p>When you use certain social features on our Platform, you can create a public profile that may include information such as your screen name, profile picture and hometown. You can also share content with your friends or the public, including information about your STREETZMNL activity. We encourage you to use the tools we provide for managing ’s social sharing to control what information you make available through STREETZMNL’s social features.</p>
+
+                <h2 id="protect-data">PROTECTION and MANAGEMENT of Your Personal Data</h2>
+
+                <h4>Encryption & Security</h4>
+                <p>We use a variety of technical and organizational security measures, including encryption and authentication tools, to maintain the safety of your personal data.</p>
+
+                <h4>International Transfers of your Personal Data</h4>
+                <p>The personal data we collect (or process) in the context of our Platform will be stored in the USA and other countries. Some of the data recipients with whom STREETZMNL shares your personal data may be located in countries other than the country in which your personal data originally was collected. The laws in those countries may not provide the same level of data protection compared to the country in which you initially provided your data. Nevertheless, when we transfer your personal data to recipients in other countries, including the USA, we will protect that personal data as described in this privacy policy and in compliance with applicable law.</p>
+                <p>We use a variety of measures to ensure that your personal data transferred to receives adequate protection in accordance with data protection rules. Where personal data is transferred within STREETZMNL, we use an intragroup data transfer agreement.</p>
+
+                <h4>Retention of your Personal Data</h4>
+                <p>Your personal information will be retained for as long as is necessary to carry out the purposes set out in this privacy policy (unless a longer retention period is required by applicable law). In general, this means that we will keep your personal data for as long as you keep your STREETZMNL account. For personal data related to product purchases, we retain this longer to comply with legal obligations (such as tax and sales laws and for warranty purposes).
+
+                <h2 id="rights-data">YOUR RIGHTS Relating to Your Personal Data</h2>
+                <p>You have the right to request: (i) access to your personal data; (ii) an electronic copy of your personal data (portability) and to have this information transmitted to another company; (iii) correction of your personal data if it is incomplete or inaccurate; or (iv) deletion or restriction of your personal data in certain circumstances provided by applicable law. These rights are not absolute. Where we have obtained your consent for the processing of your personal data, you have the right to withdraw your consent at any time.</p>
+                <p>If you would like to request a copy of your personal data or exercise any of your other rights, please email us at <a href="streetzmnl@gmail.com">privacy@gmail.com</a>.</p>
+
+                <h4>Opting Out of Direct Marketing</h4>
+                <p>If you have a STREETZMNL account, you can opt-out of receiving STREETZMNL’s marketing communications by modifying your preferences in the "My Account->Account Settings" section of our Platform. You can also opt-out by modifying your email or SMS subscriptions by clicking on the unsubscribe link or following the opt-out instructions included in the message. You can also contact us using the contact details in the “Question and Feedback” section below.</p>
+
+                <h2 id="cookies">COOKIES and Pixel Tags</h2>
+                <p>StreetzMNL collects information, which may include personal data, from your browser when you use our Platform. We use a variety of methods, such as cookies and pixel tags to collect this information, which may include (i) IP address; (ii) unique cookie identifier, cookie information and information on whether your device has software to access certain features; (iii) unique device identifier and device type; (iv) domain, browser type and language, (v) operating system and system settings; (vi) country and time zone; (vii) previously visited websites; (viii) information about your interaction with our Platform such as click behavior, purchases and indicated preferences; and (ix) access times and referring URLs.</p>
+
+                <p>Third parties may also collect information via Platform through cookies, third party plug-ins and widgets. These third parties collect data directly from your web browser and the processing of this data is subject to their own privacy policies.</p>
+    
+                <p>We use cookies and pixel tags to track our customers’ usage of the Platform and to understand our customers’ preferences (such as country and language choices). This enables us to provide services to our customers and improve their online experience. We also use cookies and pixel tags to obtain aggregate data about Platform traffic and interaction, to identify trends and obtain statistics so that we can improve our Platform. There are generally three categories of cookies used on our Platform:</p>
+
+                <ul>
+                  <li>Functional: These cookies are required for basic site functionality and are therefore always enabled. These include cookies that allow you to be remembered as you explore our Sites within a single session or, if you request, from session to session. They help make the shopping bag and checkout process possible as well as assist in security issues and conforming to regulations.</li>
+                  <li>Performance: These cookies allow us to improve our Sites’ functionality by tracking usage. In some cases, these cookies improve the speed with which we can process your request and allow us to remember site preferences you have selected. Refusing these cookies may result in poorly-tailored recommendations and slow site performance.</li>
+                  <li>Social media and Advertising: Social media cookies offer the possibility to connect you to your social networks and share content from our Platform through social media.  Advertising cookies (of third parties) collect information to help better tailor advertising to your interests, both within and beyond our Platform. In some cases, these cookies involve the processing of your personal data. Refusing these cookies may result in seeing advertising that is not as relevant to you or you not being able to link effectively with Facebook, Twitter, or other social networks and/or not allowing you to share content on social media.</li>
+                </ul>
+
+                <p>For a comprehensive and up-to-date summary of every third-party accessing your web browser (through STREETZMNL Platform or otherwise), we recommend installing a web browser plugin built for this purpose.  You can also choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser settings on each browser and device that you use. Each browser is a little different, so look at your browser Help menu to learn the correct way to modify your cookies. If you turn cookies off, you may not have access to many features that make our Platform more efficient and some of our services will not function properly. There are also general resources for opting out of interest-based advertising available on the website of the Digital Advertising Alliance. </p>
+
+                <p>Similarly, you can adjust your advertising preferences on your mobile device at the device level.  For example, to adjust your advertising preferences in iOS, visit Settings > Privacy > Advertising > Limit Ad Tracking. To adjust your advertising preferences in Android, visit Settings > Google > Ads > Opt out of interest-based ads.</p>
+
+                <h2 id="thirdparty">USING StreetzMNL Platform with Third-Party Products and Services</h2>
+
+                <p>Our Platform allow you to interact with a wide variety of other digital products and services.  For example, our Platform can integrate with third-party devices for activity tracking, social networks, music streaming services and other digital services.</p>
+
+                <p>If you choose to connect your STREETZMNL account with a third-party device or account, your privacy rights on third-party platforms will be governed by their respective policies.  For example, if you choose to share your STREETZMNL activity on third-party social media platforms, the policies of those platforms govern the data that resides there. </p>
+
+                <p>Our Platform may provide links to other (third-party) websites and apps for your convenience or information. Linked sites and apps have their own privacy notices or policies, which we strongly encourage you to review. To the extent any linked websites or apps are not owned or controlled by us, we are not responsible for their content, any use of the websites or apps, or the privacy practices of the websites or apps.</p>
+
+                <h2 id="changes-to">CHANGES to Our Privacy Policy</h3>
+
+                <p>Applicable law and our practices change over time. If we decide to update our privacy policy, we will post the changes on our Platform. If we materially change the way in which we process your personal data, we will provide you with prior notice, or where legally required, request your consent prior to implementing such changes. We strongly encourage you to read our privacy policy and keep yourself informed of our practices.  This privacy policy was last modified in November 11 2022.</p>
+
+                <h2 id="q&a-feedback">QUESTIONS and Feedback</h2>
+
+                <p>We welcome questions, comments, and concerns about our privacy policy and privacy practices. If you wish to provide feedback or if you have questions or concerns or wish to exercise your rights related to your personal data, please contact us via: (i) the “Contact Us” section of our website; or (ii) an email to privacy@streetzmnl.com; or (iii) our Privacy Office at: StreetzMNL Privacy Office, StreetzMNL European Operations Netherlands B.V., Colosseum 1, 1213NL Hilversum, The Netherlands.</p>
+
+                <p>If you are not satisfied with the response you receive, you may lodge a complaint with the relevant regulatory authority in the country in which you reside.</p>
+                <p class="lastpart">Your personal information will be retained for as long as is necessary to carry out the purposes set out in this privacy policy (unless a longer retention period is required by applicable law). In general, this means that we will keep your personal data for as long as you keep your StreetzMNL account. For personal data related to product purchases, we retain this longer to comply with legal obligations (such as tax and sales laws and for warranty purposes).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--END NG PRIVACY POLICY MODAL-->
+
+<!-- TERMS OF USE MODAL -->
+<div class="modal fade img-fluid" id="termsUseModal" tabindex="-1" aria-labelledby="termsUseModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="mt-4">STREETZMNL TERMS OF USE</h1>
+              <p class="mt-3">Date of last revision: June 2022</p>
+              <h4 class="mt-3">PLEASE READ THESE TERMS OF USE (“TERMS”) CAREFULLY BEFORE USING ANY STREETZMNL PLATFORM.</h4>
+              <h5 class="mt-5">If you live in any of the following countries or regions, additional terms may apply to you and are viewable at the bottom of these Terms. We display the country/region within the Terms when applicable.  These additional terms override the Terms below to the extent of any inconsistency.</h5>
+
+              <p>Welcome to the STREETZMNL community!  You are reading these Terms because you are using a StreetzMNL website, digital experience, social media platform, mobile app, wearable technology, or one of our other products or services, all of which are part of STREETZMNL’s Platform (“Platform”).  You may access the Platform through a computer, mobile phone, tablet, console, or other technology, which we refer to here as a “Device”.  Your carrier's normal rates and fees apply to your Device.</p>
+        
+              <p>These Terms create a legally binding agreement between you and STREETZMNL and its affiliates (which we may refer to as “STREETZMNL,” “we,” “us,” or “our”) regarding your use of the Platform. Please review our List of Local Entities for the name of the STREETZMNL entity responsible for providing the Platform to you and the appropriate contact information. A few important points:</p>
+    
+              <p>This personal data includes:</p>
+                <ul>
+                  <li>Our Terms May Change.  Some jurisdictions do not permit unilateral updates or changes to consumer terms, so this paragraph may not apply to you.  [See Canada terms.] We may update these Terms from time to time.  If a material change is made, we will post a notice on the Platform or send you a notification.  Read through any changes, and if you don’t agree to them, please stop using the Platform.  If you continue to use our Platform after we notify you of changes, you will be deemed to have accepted the updated Terms, except to the extent prohibited by applicable law.</li>
+                  <li>Terms of Sale.  By making any purchase with us, you also agree to the Terms of Sale that apply in your country or region.</li>
+                  <li>Privacy Policy.  Our Privacy Policy describes the collection and use of personal information on the Platform and applies to your use of the Platform.</li>
+                  <li>Important Notice for Amateur Athletes.  You are responsible for ensuring that your participation on the Platform does not affect your eligibility as an amateur athlete.  Please check with your amateur athletic association for the rules that apply to you.  STREETZMNL is not responsible or liable for your use of the Platform resulting in your ineligibility as an amateur athlete. </li>
+                </ul>
+
+              <h4>1. GROUND RULES</h4>
+              <p>Eligibility.  You are only eligible to use the Platform if you are of legal age in your country/region or if you have consent from your parent or guardian.  There may be certain age restrictions for specific Platform services in various countries or regions.</p>
+              <P>Rules for Registration.  When you register for an account with us, the following rules apply:</P>
+        
+                <ul>
+                  <li>Be True:  Provide accurate and current registration information.</li>
+                  <li>Be You:  Keep your registration personal.  Do not register for more than one STREETZMNL account, register a STREETZMNL account on behalf of someone else, or transfer your account.</li>
+                  <li>Be Secure:  Keep your username, password and other login credentials secure and do not allow anyone else to use your account.</li>
+                  <li>Be Responsible:  Inform STREETZMNL immediately of any unauthorized use of your STREETZMNL account.  You are responsible for anything that happens through your STREETZMNL account – with or without your permission. TO THE MAXIMUM EXTENT ALLOWED BY APPLICABLE LAW, STREETZMNL IS NOT RESPONSIBLE FOR ANY LOSS OR ACTIVITY THAT RESULTS FROM THE UNAUTHORIZED USE OF YOUR ACCOUNT.</li>
+                </ul>
+
+              <h4>2.  OWNERSHIP OF CONTENT</h4>
+              <p>Except for User Content (defined below), all of the content on our Platform - including text, software, scripts, code, designs, graphics, photos, sounds, music, videos, applications, interactive features, articles, news stories, sketches, animations, stickers, general artwork and other content ("Content") - is owned by STREETZMNL or others we license Content from, and is protected by copyright, trademark, patent and other laws. STREETZMNL reserves all rights not expressly described in these Terms.</p>
+        
+                <ul>
+                  <li>All trademarks, service marks and trade names (e.g., the STREETZMNL name and the Swoosh design) are owned, registered and/or licensed by STREETZMNL.  You do not acquire a license or any ownership rights to any trademarks, service marks, or trade names through your access or use of the Platform or Content.</li>
+                  <li>You agree not to change or delete any ownership notices from materials downloaded or printed from the Platform.</li>
+                  <li>To the extent STREETZMNL approves the download or use of Content comprised of copyrights or copyrightable works, STREETZMNL grants you a limited, personal, non-transferable, non-sublicensable, and revocable license to access and use such copyrights or copyrightable works solely for their intended purpose and solely for as long as STREETZMNL makes such Content generally available to the public. You do not acquire any ownership rights in the Content (including any trademarks or other intellectual property included in the Content), and all such Content is intended for personal, non-commercial use.  STREETZMNL reserves the right to monitor your use and to alter or revoke this license or your access to the Content at any time and for any reason.  STREETZMNL reserves the right to take down any Content in violation of these terms or STREETZMNL’s intellectual property rights.  STREETZMNL allowing you this limited use does not constitute a waiver of any of STREETZMNL’s rights to the Content. </li>
+                  <li>Outside of the specific usage rights granted to you by STREETZMNL in connection with the Platform, you agree not to use, copy, edit, translate, display, distribute, download, transmit, sell, create derivative works of, or in any way exploit any Content, including User Content (unless it is your own User Content that you legally post on the Platform), without STREETZMNL’s prior written consent. Unauthorized use of the Content may constitute a breach of copyright, trademark or other intellectual property laws and may subject you to criminal or civil charges and penalties.</li>
+                </ul>
+
+              <h4>3.  POSTING CONTENT ON THE PLATFORM</h4>
+              <p>User Content License. Some parts of the Platform allow you to post photos, videos, comments, and other content, which we refer to as “User Content.”  STREETZMNL is not responsible for User Content others post to the Platform. User Content is owned by you or whoever created it, but when you post User Content you license it to STREETZMNL as described below:</p>
+
+                <ul>
+                  <li>You represent that you have the right to post your User Content, and you grant STREETZMNL a non-exclusive, perpetual, transferable, sub-licensable, royalty-free, worldwide license to use any of the User Content that you post on or in connection with the Platform, including the likeness of any person that appears in the User Content, or any of the concepts or ideas contained in the User Content, for any purpose, including commercial use, which includes the right to translate, display, reproduce, modify, create derivative works, sublicense, distribute and assign these rights. STREETZMNL may, in its sole discretion, remove any User Content at any time. </li>
+                  <li>You understand that deleted User Content may persist in STREETZMNL’s systems and on the Platform to the extent your User Content has been publicly posted or shared with others who have not deleted it, unless you or the relevant individual request deletion or blocking of personal data in accordance with applicable law. </li>
+                </ul>
+
+              <p>LICENSE TO USE COMMENTS, FEEDBACK AND IDEAS.  You understand that any comments, feedback, or ideas you send us are provided on a non-confidential basis and you grant to STREETZMNL a perpetual, worldwide license to use all comments, feedback and ideas you may share with us, without notice, compensation or acknowledgement to you, for any purposes whatsoever, including, but not limited to, developing, manufacturing and marketing products and services and creating, modifying or improving products and services.</p>
+
+              <h4>4.  USER CODE OF CONDUCT</h4>
+              <p>We’re excited to have you contribute to the STREETZMNL community.  Here are a few basic rules:</p>
+
+                <ul>
+                  <li>Be Original.  Only post User Content to the Platform if you have all permissions and rights needed to make that User Content available, including from any individuals who appear or are mentioned in your User Content. </li>
+                  <li>Be Safe.</li>
+                  <li>Do not do anything that may expose STREETZMNL or its users to any type of harm, including anything that may disrupt, damage, disable, tamper with, overburden or limit the functionality of the Platform.</li>
+                  <li>Do not post User Content that contains software viruses, programs or other computer code, and do not circumvent or modify any Platform software or security technology.</li>
+                  <li>Do not use any data mining, robots, scraping or similar data gathering methods.</li>
+                  <li>Unless we indicate otherwise, our Platform is a public place.  Do not post personal information to the Platform - yours or anybody else’s.</li>
+                  <li>Be Personal.</li>
+                  <li>Do not post any advertising, solicitation or commercial content on the Platform or accept payment from a third party in exchange for performing commercial activity on the Platform.</li>
+                  <li>Do not collect or solicit personal information from other Platform users or send unsolicited messages.</li>
+                  <li>Do not use automated technology to interact with the Platform.</li>
+                  <li>Be Appropriate. Respect the community and do not post User Content, link to a website, or do anything that is illegal, misleading, malicious, harassing, inaccurate, discriminatory, or otherwise objectionable or inappropriate or which violates any applicable laws. STREETZMNL has the right to prescreen, monitor, or remove User Content – but we have no obligation to do so.</li>
+                  <li>Be Yourself.  Do not impersonate any person or organization, including athletes or STREETZMNL employees.</li>
+                  <li>HAVE FUN!</li>
+                </ul>
+
+              <h4>5.  COPYRIGHT INFRINGEMENT</h4>
+
+              <p>Please consult your legal advisor before filing a notice with us because there may be penalties for false claims.  STREETZMNL may terminate the accounts of Platform users found to infringe third party copyrights.</p>
+
+              <p>If you believe that your work has been improperly copied to the Platform, such that it constitutes infringement, please provide us with the following information.</p>
+
+              <p>(1) name, address, telephone number, email address and an electronic or physical signature of the copyright owner or of the person authorized to act on his/her behalf;</p>
+
+              <p>(2) a description of the copyrighted work that you claim has been infringed;</p>
+
+              <p>(3) a description of where on the Platform the content that you claim is infringing is located;</p>
+
+              <p>(4) a written statement that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law; and</p>
+
+              <p>(5) a statement by you, made under penalty of perjury (depending on applicable law), that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner's behalf.</p>
+
+              <p>Send copyright infringement complaints to:</p>
+
+              <div class="legal-department">
+                <p>Legal Department (Copyright)</p>
+                <p>One Bowerman Dr., Beaverton, OR 97005</p>
+                <p><span>Telephone:</span>503-671-6453</p>
+                <p><span>Fax:</span>503-646-6926</p>
+              </div>
+
+              <h4>6.  PARTNERS ON THE PLATFORM</h4>
+
+              <p>From time to time, STREETZMNL may link to or partner with third-party websites, social media platforms, mobile apps, and other products and services (“Third Parties”).  You may be able to connect with these Third Parties through the Platform, but this does not mean STREETZMNL endorses, monitors or has any control over these Third Parties or their activities, which are subject to separate terms of use and privacy policies.  You should carefully review any Third Party’s sites and terms of use and privacy policy. STREETZMNL is not responsible for the content, policies, or activities of Third Parties and you interact with Third Parties at your own risk.</p>
+
+              <h4>7.  IMPORTANT DISCLAIMERS</h4>
+
+              <p>PHYSICAL ACTIVITY. The Platform may include features that promote physical activity, nutrition or general wellness.  They are for your informational purposes only and are not intended as medical advice or services, or for diagnostic or treatment purposes.</p>
+
+              <ul>
+                <li>Consider the risks involved and consult with your medical professional before engaging in any physical activity. </li>
+                <li>Never disregard professional medical advice or delay in seeking it because of something you have viewed on the Platform. </li>
+                <li>TO THE MAXIMUM EXTENT ALLOWED BY APPLICABLE LAW, STREETZMNL IS NOT RESPONSIBLE OR LIABLE FOR ANY INJURIES OR DAMAGES YOU MAY SUSTAIN THAT RESULT FROM YOUR USE OF, OR INABILITY TO USE, THE FEATURES ON THE PLATFORM.</li>
+              </ul>
+
+              <p>USER INTERACTIONS.  To the extent allowed by applicable law, we are not responsible for your interactions with other users of the Platform or any damage or harm you may experience because of these interactions.</p>
+        
+                <ul>
+                  <li>Be responsible and take precautions when interacting with other users (including users you do not know) on the Platform. Before you meet another person face-to-face, consider investigating, bringing a friend, choosing public locations and letting someone know where you will be.  STREETZMNL is under no obligation to become involved with any user dispute, but may do so at its own discretion.</li>
+                </ul>
+
+              <p>WARRANTY DISCLAIMER.  Some jurisdictions do not permit certain limitations or exclusions on liabilities, legal warranties and remedies, so these exclusions and limitations may not apply to you.</p>
+
+              <ul>
+                <li>The Platform, Content, and the materials and products on this Platform are provided "AS IS.” We aren’t making any promises of any kind, including about the Platform’s accuracy, adequacy, usefulness, reliability or otherwise. TO THE MAXIMUM EXTENT ALLOWED BY APPLICABLE LAW, STREETZMNL IS NOT RESPONSIBLE OR LIABLE FOR ANY USER CONTENT POSTED ON THE PLATFORM.    </li>
+                <li>STREETZMNL does not guarantee that the Platform will be uninterrupted or error-free, that any defects will be corrected, or that the Platform is free of viruses or anything else harmful.  </li>
+                <li>To the fullest extent permitted by law, STREETZMNL disclaims all warranties, express or implied, regarding the Platform, Content, User Content and any products or services you may obtain or access through the Platform, including, but not limited to, implied warranties of title, merchantability, fitness for a particular purpose and non-infringement.</li>
+                <li>You are solely responsible for any damage to your Device resulting from accessing the Platform, to the extent applicable law does not provide otherwise.</li>
+                <li>We hope you enjoy and get the full benefit of the Platform; however, we do not guarantee any results.</li>
+              </ul>
+
+              <h4>8.  TERMINATION</h4>
+        
+              <p>STREETZMNL may terminate or modify any STREETZMNL Platform, member program, product or service at any time without notice.</p>
+
+              <p>STREETZMNL may terminate or suspend your account, delete your profile or any of your User Content, and restrict your use of all or any part of the Platform at any time and for any reason, without any liability to STREETZMNL, subject to applicable law.</p>
+
+                <ul>
+                  <li>You understand and agree that some of your User Content, particularly that which is displayed in an activity feed or in other public places on the Platform, may continue to appear publicly even after your account is terminated, subject to your right to have your User Content removed upon request in accordance with applicable law.</li>
+                  <li>These Terms remain in effect even after your account is terminated or you have stopped using the Platform.</li>
+                </ul>
+
+              <h4>9.  INDEMNIFICATION / LIMITATION OF LIABILITY</h4>
+
+              <p>We want you to enjoy our Platform, but STREETZMNL must also protect itself from any damages you may cause.</p>
+
+              <p>Indemnification and RELEASE.  Some jurisdictions do not permit certain limitations or exclusions on liabilities, legal warranties and remedies, so these exclusions limitations may not apply to you. You agree to indemnify, defend, and hold harmless STREETZMNL Inc., its affiliates, officers, directors, employees, agents, licensors and suppliers (the “STREETZMNL Parties”) from and against all claims, losses, liabilities, expenses, damages and costs, including, without limitation, attorneys' fees, arising from or relating in any way to your User Content, your use of Content, your use of the Platform, your conduct in connection with the Platform or with other Platform users, or any violation of these Terms of Use, any law or the rights of any third party. You, for yourself and on behalf of your heirs, estate, insurers, successors and assigns, hereby fully and forever release and discharge the STREETZMNL Parties from any and all claims or causes of action you may have for damages relating in any way to your use of the Platform.</p>
+
+              <p>LIMITATION OF LIABILITY.  Some jurisdictions do not permit certain limitations or exclusions on liabilities, legal warranties and remedies, so these exclusions/limitations may not apply to you.  NONE OF THE STREETZMNL PARTIES WILL BE LIABLE FOR ANY DIRECT, SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES, INCLUDING WITHOUT LIMITATION FOR ANY LOST PROFITS OR LOST DATA, THAT RESULT FROM THE USE OF, OR THE INABILITY TO USE, THE PLATFORM OR THE PERFORMANCE OF THE PRODUCTS PURCHASED THROUGH THE PLATFORM OR THE CONDUCT OF OTHER PLATFORM USERS (WHETHER ONLINE OR OFFLINE), OR ATTENDANCE AT A STREETZMNL EVENT OR STREETZMNL PARTNER EVENTS, OR ANY USER CONTENT OR ANY OTHER ACTIVITY IN CONNECTION WITH THE USE OF THE PLATFORM, EVEN IF STREETZMNL HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  YOU ASSUME TOTAL RESPONSIBILITY FOR YOUR USE OF THE PLATFORM. YOUR ONLY REMEDY AGAINST STREETZMNL IN CONNECTION WITH ANY DAMAGES ARISING FROM YOUR USE OF THE PLATFORM OR ANY CONTENT IS TO STOP USING THE PLATFORM. IF STREETZMNL IS FOUND TO BE LIABLE TO YOU FOR ANY DAMAGE OR LOSS WHICH IS IN ANY WAY CONNECTED WITH YOUR USE OF THE PLATFORM OR ANY CONTENT, STREETZMNL'S LIABILITY SHALL NOT EXCEED US$100.00 OR EURO 100.00 IF YOU LIVE IN EUROPE.</p>
+
+              <h4>10.  DISPUTES / ADDITIONAL TERMS</h4>
+
+              <h5>Choice of Law/Jurisdiction</h5>
+
+              <h5>If you live in any of the following countries/regions, different “Choice of Law/Jurisdiction” terms may apply to you.</h5>
+
+                <ul>
+                  <li>You agree that this Platform is a passive platform solely based in Oregon, USA, which does not give rise to personal jurisdiction over STREETZMNL in jurisdictions other than Oregon.</li>
+                  <li>You agree that the Platform, Terms, Privacy Policy and any dispute between you and STREETZMNL shall be governed in all respects by Oregon law, without regard to choice of law provisions, and not by the 1980 U.N. Convention on Contracts for the International Sale of Goods.</li>
+                  <li>Except where prohibited by applicable law, and without limitation to any statutory rights for consumers, you agree that all disputes, claims and legal proceedings directly or indirectly arising out of or relating to the Platform (including but not limited to the purchase of STREETZMNL products) shall be resolved individually, without resort to any form of class action, and exclusively in the state or federal courts located in Multnomah County, Oregon, USA.</li>
+                  <li>You consent to waive all defenses of “lack of personal jurisdiction” and “inconvenient forum” with respect to venue and jurisdiction in the state and federal courts of Multnomah County, Oregon.</li>
+                  <li>All claims shall be brought within one (1) year after the claim arises, except to the extent a longer period is required by applicable law.</li>
+                </ul>
+
+              <h5>Electronic Communications</h5>
+
+                <ul>
+                  <li>By using the Platform, you agree to receive certain electronic communications from STREETZMNL, subject to applicable law.</li>
+                  <li>You agree that any notice, agreement, disclosure or other communication that STREETZMNL sends you electronically will satisfy any legal communication requirements, including that such communications be in writing.</li>
+                </ul>
+
+              <h5>Right to Assign, No Waivers, Severability</h5>
+
+                <ul>
+                  <li>STREETZMNL may assign its rights and duties under these Terms to any party at any time without notice to you, unless notice to you is required by applicable law, but this will not affect your rights or our obligations under these Terms. </li>
+                  <li>STREETZMNL’s failure to insist upon or enforce strict performance of these Terms is not a waiver of any of these Terms or STREETZMNL’s rights. Users should always assume these Terms apply.</li>
+                  <li>If any provision in these Terms is held invalid or unenforceable, the remainder of these Terms shall continue to be enforceable.</li>
+                </ul>
+
+              <h6 id="lastpart">Thanks for reading.  Please enjoy our community!</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--END NG TERMS OF USE MODAL-->
+
+<!-- CONTACT US MODAL -->
+<div class="modal fade img-fluid" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 id="texttitleQuote2">Contact Us</h2>
+              <br><br>
+              <p><strong>Phone Number:</strong> 0969-696-6969</p>
+              <p><strong>Email:</strong> streetzmnl@gmail.com</p>
+              <br><br>
+
+              <p><strong>Address:</strong> HXRM+4G2, Natividad Almeda-Lopez corner A. Villegas and, San Marcelino St, Ermita, Manila, Metro Manila</p>
+              
+            </div>
+            <div class="col-md-6">
+              <h5>Our Location</h5>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247279.40253016172!2d120.78174043784661!3d14.442103504628696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cb209479aa11%3A0x872db4487b1bb367!2sSM%20City%20Manila!5e0!3m2!1sen!2sph!4v1728658794598!5m2!1sen!2sph" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer bg-dark">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END NG CONTACT US MODAL -->
+
+<!-- MEET THE DEVELOPERS MODAL -->
+<div class="modal fade img-fluid" id="meetDevelopersModal" tabindex="-1" aria-labelledby="meetDevelopersModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="col-md-12">
+
+            <div class="container" data-aos="zoom-in">
+              <div class="my-5">
+                <div class="row text-center">
+                  <div class="col-md-12">
+                    <h2 id="texttitleQuote">MEET THE DEVELOPERS</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="container" data-aos="zoom-in">
+              <div class="my-5">
+                <div class="row text-center">
+                  <div class="col-md-12">
+                    <img src="./assets/images/Edrian.png" class="img-fluid profile-img rounded-circle">
+                    <h1>Edrian Paul A. Dariguez</h1>
+                    <p>_____________________________________________________________________</p>
+                    <p>Edrian Paul A. Dariguez is a motivated and forward-thinking individual with a strong determination to not only complete his college education but also thrive in the field of programming. He embraces challenges as stepping stones for personal and professional growth, using his resilience to push through any hurdles. With a deep-rooted passion for technology, Edrian constantly seeks to expand his knowledge and fine-tune his abilities. His ultimate goal is to make a lasting impact in the tech world, particularly with his ongoing project—a program for his shoe shop. His commitment to learning and creativity sets him apart as he works toward shaping a successful future.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br><br><br>
+
+            <div class="container" data-aos="zoom-in">
+              <div class="my-5">
+                <div class="row text-center">
+                  <div class="col-md-12">
+                    <img src="./assets/images/Mick.png" class="img-fluid profile-img rounded-circle">
+                    <h1>Mick Joemer C. Bunag</h1>
+                    <p>_____________________________________________________________________</p>
+                    <p>Mick Joemer C. Bunag is a determined individual with a steadfast dream to not only complete his college education but also to excel in the field of programming. Despite facing various challenges along the way, Mick remains unwavering in his commitment to achieving his goals. His passion for programming fuels his drive to learn and grow, and he is dedicated to acquiring the necessary skills and knowledge to succeed in the tech industry.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br><br><br>
+
+            <div class="container" data-aos="zoom-in">
+              <div class="my-5">
+                <div class="row text-center">
+                  <div class="col-md-12">
+                    <img src="./assets/images/Marc.png" class="img-fluid profile-img rounded-circle">
+                    <h1>Marc Lorenz M. Santiago</h1>
+                    <p>_____________________________________________________________________</p>
+                    <p>Marc Lorenz M. Santiago is a dedicated and ambitious individual, with a clear vision to not only complete his college journey but also to excel in the realm of programming. He views challenges as opportunities for growth, and his resilience has played a crucial role in overcoming the obstacles he encounters. Driven by a profound passion for technology, Marc continually strives to enhance his knowledge and refine his skills, aiming to make a meaningful impact in the tech industry. His commitment to learning and innovation distinguishes him as he progresses toward a successful future, particularly in developing his shoe shop program.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br><br><br>
+
+            <div class="container" data-aos="zoom-in">
+              <div class="my-5">
+                <div class="row text-center">
+                  <div class="col-md-12">
+                    <img src="./assets/images/Vonn.png" class="img-fluid profile-img rounded-circle">
+                    <h1>Vonn Kaile T. Gonzales</h1>
+                    <p>_____________________________________________________________________</p>
+                    <p>Vonn Kaile T. Gonzales is a driven and ambitious individual, with a clear vision to not only complete his college journey but to stand out in the world of programming. He embraces challenges as opportunities for growth, and his resilience has been a key factor in overcoming obstacles along the way. Fueled by a deep passion for technology, Vonn is constantly pushing himself to expand his knowledge and sharpen his skills, all with the goal of making a lasting impact in the tech industry. His commitment to learning and innovation sets him apart as he works toward a successful future.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br><br><br>
+
+            <div class="container" data-aos="zoom-in">
+              <div class="my-5">
+                <div class="row text-center">
+                  <div class="col-md-12">
+                    <img src="./assets/images/Kurt.png" class="img-fluid profile-img rounded-circle">
+                    <h1>Kurt Ian L. Bayoneta</h1>
+                    <p>_____________________________________________________________________</p>
+                    <p>Kurt Ian L. Bayoneta is a dedicated and skilled website developer with a strong focus on creating user-friendly, responsive, and visually appealing websites. With expertise in HTML, CSS, JavaScript, and popular frameworks like Bootstrap, Kurt designs and builds functional web applications tailored to meet client needs. His experience ranges from developing login systems and dynamic forms to integrating third-party services and creating tools such as calculators and custom user dashboards. Kurt is passionate about delivering high-quality web experiences that enhance user engagement and support business goals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br><br><br>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--END NG MEET THE DEVELOPERS MODAL-->
+
+<!-- START FOOTER -->
+<div id="footer" class="section"></div>
+<footer class="bg-dark text-white py-4">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-5 footer-links">
+        <div class="row">
+          <div class="col-md-6">
+            <h5><a href="#" data-bs-toggle="modal" data-bs-target="#contactUsModal" style="color: white; text-decoration: none;">Contact Us</a></h5>
+            <br>
+            <ul class="list-unstyled">
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#registerModal">Become A Member</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#feedbackModal">Send Us Feedback</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#meetDevelopersModal">Meet the Developers</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <br><br><br><br><br><br><br>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#helpModal">Help</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#deliveryModal">Delivery</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#returnsModal">Returns</a></li>
+              <br>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom d-flex justify-content-start align-items-center">
+          <p>&copy; 2024 StreetzMNL, Inc. All rights reserved</p>
+          <a href="" data-bs-toggle="modal" data-bs-target="#termsSaleModal">Terms of Sale</a>
+          <a href="" data-bs-toggle="modal" data-bs-target="#termsUseModal">Terms of Use</a>
+          <a href="" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">StreetzMNL Policy</a>
+          <br><br><br><br><br><br><br><br>
+        </div>
+      </div>
+      <div class="col-md-6 text-md-end footer-socials">
+        <h5 class="footerH5First">Follow Us</h5>
+        <a href="https://www.facebook.com/TIP1962official" class="social-icon"><img src="./assets/images/facebook.png" alt="Facebook Icon" width="30"></a>
+        <a href="https://www.instagram.com/tip1962official/?hl=en" class="social-icon"><img src="./assets/images/instagram.png" alt="Instagram Icon" width="30"></a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="social-icon"><img src="./assets/images/youtube.png" alt="YouTube Icon" width="30"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--END NG FOOTER-->
+
+<!-- SCRIPT LINKS -->
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/850a6f41ca.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+<!-- END NG SCRIPT LINKS -->
+
+</body>
+</html>
