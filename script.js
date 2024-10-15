@@ -33,6 +33,27 @@ function validateSignIn(event)
 }
 // END NG SIGN IN VALIDATION //
 
+
+document.getElementById('find-store-link').addEventListener('click', function(event) {
+  event.preventDefault(); 
+
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+
+
+          var googleMapsUrl = `https://www.google.com/maps/search/shoe+store/@${latitude},${longitude},15z`;
+          window.open(googleMapsUrl, '_blank');
+      }, function(error) {
+          alert('Unable to retrieve your location. Please check your location settings.');
+      });
+  } else {
+      alert('Geolocation is not supported by this browser.');
+  }
+});
+
+
 // START NG REGISTER VALIDATION //
 function validateRegistration(event) 
 {
