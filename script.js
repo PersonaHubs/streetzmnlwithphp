@@ -43,10 +43,12 @@ function validateRegistration(event)
   const password = document.getElementById('password');
   const confirmPassword = document.getElementById('confirmPassword');
   const phone = document.getElementById('phone');
+  const zip = document.getElementById('Zip');
+  const address = document.getElementById('address');
 
   let isValid = true;
 
-  [email, confirmEmail, password, confirmPassword, phone].forEach(field => 
+  [email, confirmEmail, password, confirmPassword, phone, zip, address].forEach(field => 
   {
     field.classList.remove('is-invalid');
   });
@@ -67,9 +69,22 @@ function validateRegistration(event)
     isValid = false;
   }
 
-  if (!/^\d*$/.test(phone.value)) 
+  if (!/^\d{11}$/.test(phone.value)) 
   {
     phone.classList.add('is-invalid');
+    isValid = false;
+  }
+
+  if (!/^\d{4}$/.test(zip.value)) 
+  {
+    zip.classList.add('is-invalid');
+    isValid = false;
+  }
+
+  if (address.value.trim() === '') 
+  {
+    alert('Address is required');
+    address.classList.add('is-invalid');
     isValid = false;
   }
 
@@ -96,29 +111,4 @@ function toggleAnswer(faq)
       icon.textContent = '▼';
   }
 }
-// END FAQ
-  $(document).ready(function() {
-    // Handle the click event for the Add to Cart button
-    $('#add-to-cart-adidas').click(function() {
-      var size = $('#adidas-casual-size').val();
-      var quantity = $('#adidas-casual-quantity').val();
-      
-      $.ajax({
-        url: 'shopPHP.php', // PHP script to handle the request
-        type: 'POST',
-        data: {
-          product: 'Adidas Grand Court', // Product name
-          size: size,
-          quantity: quantity
-        },
-        success: function(response) {
-          alert(response); // Display response from PHP
-        },
-        error: function(xhr, status, error) {
-          console.error(error); // Log any error
-        }
-      });
-    });
-  });
-
-
+// END FAQ //
